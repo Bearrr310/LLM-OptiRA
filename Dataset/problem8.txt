@@ -1,0 +1,14 @@
+### Problem Background
+In a multi-user communication system, a base station aims to efficiently allocate power to multiple users to maximize the overall system throughput while ensuring each user's minimum Signal-to-Interference-plus-Noise Ratio (SINR) requirement is met. The channel conditions are influenced by user distances from the base station, with the goal of optimizing power distribution to enhance communication quality. The channel gain is calculated based on the path loss model, and a total power budget is set for optimal resource allocation.
+### Specific Parameters
+- **Number of Users**: 5
+- **Reference Distance (d₀)**: 1 meter
+- **Path Loss Exponent (n)**: 2
+- **User Distances**: 
+  - User 1: 10 meters- User 2: 15 meters- User 3: 20 meters- User 4: 25 meters- User 5: 30 meters
+- **Channel Gain Factor (K)**: 200 (increased to ensure better SINR)
+- **Noise Power (N)**: 0.001 W
+- **Minimum SINR Requirement (R_min)**: 5 dB
+- **Total Power Budget (P_total)**: 10 W
+- **Maximum Transmit Power per User (P_max)**: 5 W
+These parameters provide a clear context for the optimization problem, guiding the construction of the mathematical model for power allocation in the communication system.

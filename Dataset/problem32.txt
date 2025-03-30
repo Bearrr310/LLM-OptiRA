@@ -1,0 +1,12 @@
+### **User Association and Beam Allocation in GEO Satellite Systems**
+### Problem Description:
+In a multi-beam GEO satellite communication system, the goal is to optimize user association and beam allocation to maximize system capacity. The satellite serves a large geographical area with multiple beams, and each beam is assigned to a group of users. The problem includes the joint optimization of time, frequency, and power resources allocated to each beam. The capacity of each beam depends on the allocated bandwidth and the signal-to-noise ratio (SNR), which is determined by the channel gain between the satellite and the user terminals.
+
+### Parameter Description:
+- **Channel Gain**: The **Free-space path loss model** is used here as the communication involves a GEO satellite. The channel gain \(G = \frac{P_t G_t G_r}{(4\pi d f / c)^2}\), where \(d\) is the distance between the satellite and the user.
+- **Number of Beams**: 10
+- **Number of Users per Beam**: 50
+- **Total Bandwidth**: 500 MHz (Ka-band)
+- **Maximum Satellite Power per Beam**: 20 W
+- **Noise Power Density**: \(10^{-10} \text{ W/Hz}\)
+- **Distance Between Satellite and Users**: Typically 36,000 km

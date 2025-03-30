@@ -1,0 +1,20 @@
+### **Relay Selection and Power Control in Cooperative Communication**
+
+### Problem Description:
+
+Cooperative communication enhances coverage by using relays to forward signals. The challenge is to select optimal relays and allocate power to maximize end-to-end data rates.
+
+**Objective:** Maximize the achievable data rate while minimizing total power consumption.
+
+**Constraints:**
+
+1. Each user can be served by at most one relay.
+2. The total power allocated to each relay must not exceed its power budget.
+3. The signal-to-noise ratio (SNR) at the destination must meet a minimum threshold.
+
+### Variable Parameters:
+
+- Number of users: 6
+- Number of available relays: 4
+- Maximum relay transmit power: 23 dBm
+- Minimum SNR at the destination: 12 dB

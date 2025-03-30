@@ -1,0 +1,20 @@
+### **Resource Allocation in NOMA-Based Cellular Networks**
+
+### Problem Description:
+
+Non-Orthogonal Multiple Access (NOMA) allows multiple users to share the same frequency resources with different power levels. The challenge is to allocate power optimally among users while ensuring fairness and minimizing interference.
+
+**Objective:** Maximize the sum rate of all users while ensuring a minimum rate for each user.
+
+**Constraints:**
+
+1. The power allocated to each user must be within the total available power.
+2. The decoding order must follow the power-domain NOMA principle.
+3. Each user must achieve a minimum required data rate.
+
+### Variable Parameters:
+
+- Number of users: 6
+- Total power budget: 35 dBm
+- Minimum rate per user: 2 Mbps
+- Path loss exponent: 3.5

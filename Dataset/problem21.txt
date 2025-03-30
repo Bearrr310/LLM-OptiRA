@@ -1,0 +1,14 @@
+### Power Allocation Optimization Problem
+**Problem Description**
+In a wireless communication system, the objective is to allocate power to multiple transmitters to maximize the total received signal power across all users while ensuring that each user meets a minimum signal-to-interference-plus-noise ratio (SINR) requirement. This optimization problem aims to optimize the power usage among transmitters to enhance network performance and maintain reliable communication for all users.
+
+### Variable Parameters
+1. **Number of Users**: 5
+2. **Maximum Transmit Power per User**: 30 Watts
+3. **Minimum SINR Requirement per User**: 10 dB
+4. **Path Loss Model**: The channel gain is modeled as:
+\[
+G_{ij} = \frac{1}{(d_{ij})^{\gamma}} \quad (\gamma = 2.2, d_{ij} \text{ is the distance between transmitter } i \text{ and receiver } j)
+\]
+5. **Noise Variance**: \(N_0 = 1 \times 10^{-9}\) Watts
+6. **Total Available Power**: 120 Watts

@@ -1,0 +1,4 @@
+I want to solve this optimization problem and finally generate python code that solves it. If the objective function of the optimization problem is maximization, unify them all in a minimized standard form (plus a negative sign).Make sure that in the code, the first line outputs the objective function, and the second line and then input other optimized variables.And please specify whether to maximize or minimize, using the format '[Optimization Flag: 1]' for maximize and '[Optimization Flag: 0]' for minimize.Let's think step by step.
+Input: $input$
+
+Output:

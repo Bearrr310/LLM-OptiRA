@@ -1,0 +1,19 @@
+### Time Slot Allocation Optimization Problem
+
+**Problem Description**
+
+In a multi-user communication system, the objective is to fairly allocate time slots to users to ensure that each user receives adequate transmission opportunities. The goal is to maximize the utilization of the available time slots while meeting minimum service quality requirements for each user.
+
+This optimization problem aims to maximize the efficiency of time slot usage while satisfying constraints on total time usage and minimum time allocation per user. The transmission rate for each user can still be described using the formulas above.
+
+### Variable Parameters
+
+1. **Number of Users**: 6
+2. **Total Time Slots Available**: 100 ms
+3. **Minimum Time Slot per User**: 5 ms
+4. **Channel Gain Formula**: Using a path loss model, the channel gain is set as:
+\[
+|h_i|^2 = \frac{1}{(d_i)^2} \quad (d_i = 500\, \text{m})
+\]
+5. **Power Allocation per User**: Limited to a maximum of 20 Watts per user
+6. **Minimum Service Rate**: 1 Mbps

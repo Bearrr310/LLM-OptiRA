@@ -1,0 +1,19 @@
+### **Hybrid Satellite-Terrestrial Network Resource Allocation**
+
+### **Problem Description:**
+
+Satellite-terrestrial networks use both satellite and terrestrial base stations to provide coverage. The challenge is to allocate spectrum efficiently.
+
+**Objective:** Maximize the total system throughput while avoiding interference.
+
+**Constraints:**
+
+1. The spectrum allocated to satellite and terrestrial users must be balanced.
+2. The interference between satellite and terrestrial links must be below a threshold.
+
+**Variable Parameters:**
+
+- Number of terrestrial base stations: 8
+- Number of satellite beams: 4
+- Total available spectrum: 200 MHz
+- Maximum interference threshold: -90 dBm

@@ -1,0 +1,16 @@
+### Problem Description
+In this optimization problem, we focus on maximizing the overall network throughput in a multi-user communication system using a **multi-carrier code division multiple access (MC-CDMA)** scheme. Each user transmits their data over multiple orthogonal codes, and the channel is modeled using a **Rician fading model**, suitable for environments where a strong line-of-sight (LOS) path exists alongside scattered paths. The channel gain between user \(i\) and the base station is given by \(h_{ii} \sim \mathcal{CN}(\sqrt{K}, 1)\), where \(K\) represents the Rician factor, indicating the strength of the LOS component.
+The objective function aims to maximize the sum of the logarithmic throughput across all users, achieved by optimizing the power allocation for each user while accounting for the signal-to-interference-plus-noise ratio (SINR). The optimization must satisfy the following constraints:
+1. Each user has a minimum data rate requirement that must be satisfied.
+2. The power allocated to each user cannot exceed a specified maximum power limit.
+3. The interference experienced by any user from others must remain below a specified threshold to maintain service quality.
+4. The total power utilized by all users combined must not exceed the overall power budget allocated for the system.
+
+### Variable Parameters
+- **User Count:** There are **8 users** in the network.
+- **Minimum Rate Requirement:** Each user requires a minimum data rate of **1.5 Mbps**.
+- **Maximum Power Limit:** The maximum transmit power for each user is set at **40 mW**.
+- **Interference Threshold:** The maximum allowable interference for any user is **12 mW**.
+- **Total Power Budget:** The total available power for the system is capped at **320 mW**.
+- **Noise Power:** The noise power in the system is considered to be **2 mW**.
+- **Rician Factor:** The Rician factor is set to \(K = 5\), indicating a strong line-of-sight component relative to the scattered paths.

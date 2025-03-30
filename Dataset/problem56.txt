@@ -1,0 +1,21 @@
+**Energy-Aware Task Offloading in Mobile Edge Computing (MEC)**
+
+### Problem Description:
+
+In MEC, mobile devices offload tasks to edge servers to save energy and reduce latency. The goal is to optimally decide which tasks to offload and allocate computational resources to minimize energy consumption while maintaining task deadlines.
+
+**Objective:** Minimize total energy consumption while meeting task deadline constraints.
+
+**Constraints:**
+
+1. The execution time of offloaded tasks must not exceed their deadline.
+2. Each mobile device has a limited energy budget.
+3. The total computational capacity of the edge servers must not be exceeded.
+
+### Variable Parameters:
+
+- Number of mobile devices: 8
+- Number of edge servers: 2
+- Maximum computation capacity per server: 10 GHz
+- Task deadline range: 10–50 ms
+- Energy consumption model:  E = k f^2(CPU frequency-dependent power consumption)

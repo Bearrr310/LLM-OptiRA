@@ -1,0 +1,20 @@
+### **Dynamic Backhaul Capacity Allocation in 5G Networks**
+
+### Problem Description:
+
+In 5G networks, limited backhaul capacity can become a bottleneck, requiring dynamic allocation strategies.
+
+**Objective:** Minimize congestion while maximizing data flow efficiency.
+
+**Constraints:**
+
+1. The total allocated backhaul capacity must not exceed the available bandwidth.
+2. Each base station must receive a minimum guaranteed backhaul capacity.
+3. The network must dynamically adjust allocation based on real-time traffic demand.
+
+### Variable Parameters:
+
+- Number of base stations: 8
+- Total backhaul capacity: 10 Gbps
+- Minimum backhaul per base station: 500 Mbps
+- Maximum per-user data rate: 100 Mbps

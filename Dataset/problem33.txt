@@ -1,0 +1,19 @@
+### **Energy-Efficient RIS-Assisted Communication**
+
+### **Problem Description:**
+
+Reconfigurable Intelligent Surfaces (RIS) can reflect signals to improve coverage. The challenge is to optimize the phase shifts of RIS elements.
+
+**Objective:** Minimize the total power consumption while achieving a target SINR.
+
+**Constraints:**
+
+1. The phase shift of each RIS element must be within a given range.
+2. The total transmitted power must not exceed a limit.
+
+**Variable Parameters:**
+
+- Number of RIS elements: 64
+- Number of users: 6
+- Maximum transmit power: 25 dBm
+- Minimum SINR per user: 12 dB

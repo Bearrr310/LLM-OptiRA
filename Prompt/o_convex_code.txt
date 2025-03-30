@@ -1,0 +1,4 @@
+Now write this math problem below in python code, including the objective function, constraints, and solver to use; and give me the complete python code, just give me the code, and the rest of the text is not needed.Make sure that the first line outputs the objective function(make sure the output is positive), and the second line and then input other optimized variables
+Input: $input$
+
+Output:

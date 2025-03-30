@@ -1,0 +1,14 @@
+### Power Control for Interference Mitigation Problem
+**Problem Description**
+This optimization problem focuses on minimizing the total interference experienced by users in a wireless network by optimally allocating power among transmitters. The objective is to enhance overall network performance while adhering to specific SINR requirements.
+
+### Variable Parameters
+1. **Number of Users**: 5
+2. **Maximum Transmit Power per User**: 25 Watts
+3. **Total Available Power**: 150 Watts
+4. **Minimum SINR Requirement**: 12 dB
+5. **Channel Gain Formula**: Expressed as:
+\[
+G_{ij} = \frac{1}{(d_{ij})^{\gamma}} \quad (\gamma = 2.2, d_{ij} \text{ is the distance between transmitter } i \text{ and receiver } j)
+\]
+6. **Noise Variance**: \(N_0 = 1 \times 10^{-9}\) Watts

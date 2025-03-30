@@ -1,0 +1,20 @@
+### **Optimized Trajectory Design for UAV-Assisted IoT Networks**
+
+### Problem Description:
+
+Unmanned Aerial Vehicles (UAVs) are used to provide connectivity for IoT devices in remote areas. The challenge is to design the UAV’s trajectory while ensuring efficient data collection.
+
+**Objective:** Minimize the total flight energy consumption while ensuring all IoT devices receive service.
+
+**Constraints:**
+
+1. Each IoT device must be visited by at least one UAV within a given time.
+2. The total flight time of each UAV must not exceed its battery capacity.
+3. The communication link quality between UAVs and IoT devices must meet a minimum SINR.
+
+### Variable Parameters:
+
+- Number of UAVs: 3
+- Number of IoT devices: 20
+- Maximum UAV flight time: 60 minutes
+- Minimum SINR requirement for IoT devices: 8 dB

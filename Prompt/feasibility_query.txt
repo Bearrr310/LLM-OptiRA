@@ -1,0 +1,3 @@
+Based on the following optimization problem and variable values, please determine whether the solution lies within the feasible region.
+If the solution is within the feasible region, return 1. If not, return 0. Please only return the number without any additional text.
+Input:Problem:Optimization Problem:$math$,Variable Values:$variables_str$

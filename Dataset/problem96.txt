@@ -1,0 +1,19 @@
+### **mmWave Beam Alignment Optimization**
+
+### **Problem Description:**
+
+In mmWave networks, beam alignment is crucial for maximizing throughput due to the high directionality of signals.
+
+**Objective:** Minimize the beam misalignment probability while maintaining high link quality.
+
+**Constraints:**
+
+1. Each user must be assigned to one beam.
+2. The received power at each user must be above a threshold.
+
+**Variable Parameters:**
+
+- Number of beams per base station: 8
+- Number of users: 16
+- Beam misalignment tolerance: 5°
+- Minimum received power: -70 dBm

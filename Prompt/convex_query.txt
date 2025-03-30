@@ -1,0 +1,4 @@
+Please identify if there are any non-convex parts based on the mathematical formula of the optimization problem you built in the previous step and the type of corresponding variables, and if so, choose the algorithm that you think is most appropriate to make all the non-convex components convex (including mixed integer programming problems) until you can solve them directly with the solver. And tell me the derivation of the formula to make it convex, and finally, give me the optimization problem after the convexity, including some supplementary variable formulas.
+Input: $input$
+
+Output:

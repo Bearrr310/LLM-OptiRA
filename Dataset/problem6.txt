@@ -1,0 +1,24 @@
+### Problem Description
+
+The primary goal of a multi-user communication system is to enhance overall network capacity by effectively optimizing power allocation among users. Each user transmits data over a designated channel, where the transmission capacity is significantly affected by the channel conditions, particularly the channel gain. This gain varies based on the user's distance from the base station and is influenced by environmental factors such as buildings, terrain, and obstacles.
+
+The channel gain \( |h_{ii}|^2 \) for each user is modeled using a path loss formula, which accounts for the distance \( d \) from the base station and is given by:
+
+\[
+|h_{ii}|^2 = \frac{K}{d^\alpha}
+\]
+
+where \( K \) is a constant representing the environment (e.g., urban, suburban) and \( \alpha \) is the path loss exponent, typically set at values like 2 for free space and 3 to 4 for urban environments. Users closer to the base station experience higher channel gains due to reduced distance, while those further away see a decrease in gain due to increased path loss.
+
+The system focuses on maximizing the sum of the logarithmic rates achieved by each user, which is determined by their signal-to-interference-plus-noise ratio (SINR). This SINR is calculated based on the power allocated to each user, the channel gain, and the interference caused by other users sharing the same channels. 
+
+To meet the optimization objectives, the problem is structured to ensure that each user satisfies their minimum rate requirements while maximizing overall network performance. Constraints include maximum power limits for individual users, the stipulation that each user can occupy only one channel, and limitations on interference from other users. Additionally, the total power used across all users must remain within a predefined budget. This formulation allows for greater flexibility in power allocation, accommodating diverse user demands and varying channel conditions, ultimately leading to enhanced network efficiency.
+
+### Variable Parameters
+
+1. **Number of Users**: 30 users in the network.
+2. **Maximum Power per User**: Each user has a maximum transmit power limit of 5 watts.
+3. **Total Power Budget**: The total power available for the network is set at 150 watts.
+4. **Subcarriers**: The system utilizes 10 designated subcarriers for transmission.
+5. **Minimum Rate Requirement**: Each user must achieve a minimum rate of 2 Mbps.
+6. **Interference Threshold**: The maximum allowable interference for each user is capped at 0.5 watts.

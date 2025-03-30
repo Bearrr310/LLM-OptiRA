@@ -1,0 +1,25 @@
+**Fair Resource Allocation in NOMA Networks**
+
+### Problem Description:
+
+Non-Orthogonal Multiple Access (NOMA) enables multiple users to share the same frequency resources by using power-domain multiplexing. The objective is to allocate power to users fairly while maximizing sum-rate and ensuring weak users receive a minimum rate.
+
+**Objective:** Maximize system sum-rate while ensuring fairness among users.
+
+**Constraints:**
+
+1. Each user must achieve at least a minimum required data rate.
+2. The sum of power allocated to all users must not exceed the total available power.
+3. Users with better channel conditions must not receive excessive power compared to weaker users.
+
+### Variable Parameters:
+
+- Number of users: 6
+- Maximum transmit power per base station: 30 Watts
+- Minimum required data rate per weak user: 2 Mbps
+- Power allocation fairness factor: 0.3 (ensuring weaker users receive sufficient power)
+- Path loss model:
+    
+    Gij=1(dij)3.8G_{ij} = \frac{1}{(d_{ij})^{3.8}}
+    
+- Noise power:  10^{-9} Watts

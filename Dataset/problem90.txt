@@ -1,0 +1,20 @@
+### **Uplink Scheduling for Massive MIMO Systems**
+
+### Problem Description:
+
+Massive MIMO systems enable multiple users to transmit simultaneously using a large antenna array. The challenge is to optimize the uplink scheduling strategy.
+
+**Objective:** Maximize the network throughput while ensuring fairness in resource allocation.
+
+**Constraints:**
+
+1. Each user can be scheduled on only one time slot.
+2. The total power consumption of all users must not exceed a given limit.
+3. The received SINR at the base station must meet a predefined threshold.
+
+### Variable Parameters:
+
+- Number of users: 15
+- Number of base station antennas: 64
+- Maximum transmit power per user: 20 dBm
+- Minimum SINR requirement: 12 dB

@@ -1,0 +1,21 @@
+### **Joint User Association and Resource Allocation in Heterogeneous Networks**
+
+### Problem Description:
+
+A heterogeneous network consists of macro cells and small cells. Users must be assigned to an appropriate base station while allocating resources efficiently. The challenge is to balance the load and optimize resource utilization.
+
+**Objective:** Maximize the network sum rate while ensuring load balancing among base stations.
+
+**Constraints:**
+
+1. Each user must be associated with exactly one base station.
+2. The number of users per small cell must not exceed a predefined limit.
+3. The allocated bandwidth per user must be within available limits.
+
+### Variable Parameters:
+
+- Number of macro base stations: 2
+- Number of small cells: 5
+- Number of users: 30
+- Maximum number of users per small cell: 6
+- Maximum bandwidth per small cell: 10 MHz

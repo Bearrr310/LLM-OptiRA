@@ -1,0 +1,14 @@
+### **Interference-Aware Resource Allocation in Urban Small Cell Networks**
+### Problem Description:
+The aim is to allocate radio resources in a dense urban small cell network while minimizing interference among cells. Each small cell serves multiple users, and the optimization must allocate both power and bandwidth to each user. Due to the presence of buildings and other obstacles, the signal experiences shadowing and path loss, making resource allocation more challenging. The objective is to maximize the overall system throughput while ensuring each user’s QoS is met.
+
+### Parameter Description:
+
+- **Channel Gain**: The channel gain follows the **Log-normal shadowing model**, accounting for buildings and obstacles. The gain \(G = G_0 - 10 \beta \log_{10}(d/d_0) + X_\sigma\), where \(X_\sigma\) represents the shadowing effect.
+- **Number of Small Cells**: 50
+- **Number of Users per Small Cell**: 5
+- **Maximum Transmit Power per Small Cell**: 2 W
+- **Noise Power Density**: \(10^{-8} \text{ W/Hz}\)
+- **Total Bandwidth**: 100 MHz
+- **Path Loss Exponent**: 3.5 (for urban environments)
+- **Shadowing Standard Deviation (\(X_\sigma\))**: 8 dB

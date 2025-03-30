@@ -1,0 +1,20 @@
+### **Secure Communication in Wireless Networks Using Artificial Noise**
+
+### Problem Description:
+
+To enhance security, artificial noise (AN) can be used to interfere with eavesdroppers while maintaining communication quality for legitimate users.
+
+**Objective:** Maximize the secrecy rate by optimizing artificial noise power allocation.
+
+**Constraints:**
+
+1. The total artificial noise power must not exceed a given limit.
+2. The legitimate user’s SINR must be greater than a threshold.
+3. The eavesdropper’s received SINR must be minimized.
+
+### Variable Parameters:
+
+- Number of legitimate users: 4
+- Number of eavesdroppers: 2
+- Maximum artificial noise power: 20 dBm
+- Minimum SINR for legitimate users: 15 dB

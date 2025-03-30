@@ -1,0 +1,20 @@
+### **Latency-Aware Resource Allocation for 6G Networks**
+
+### Problem Description:
+
+6G networks will require ultra-low latency for applications like autonomous driving and AR/VR. The challenge is to allocate resources dynamically while maintaining latency requirements.
+
+**Objective:** Minimize latency while maximizing system throughput.
+
+**Constraints:**
+
+1. Each user’s end-to-end delay must not exceed a predefined threshold.
+2. The total bandwidth allocated must remain within the network’s capacity.
+3. The scheduling delay must be optimized to reduce queuing times.
+
+### Variable Parameters:
+
+- Number of users: 20
+- Total available bandwidth: 100 MHz
+- Maximum latency per user: 1 ms
+- Minimum data rate per user: 10 Mbps

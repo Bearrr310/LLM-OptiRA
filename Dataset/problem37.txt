@@ -1,0 +1,18 @@
+### **Load Balancing for Users Among Base Stations**
+### Problem Description:
+This optimization problem focuses on load balancing among multiple base stations in a dense 5G network. The objective is to distribute users more evenly across base stations to prevent congestion in heavily loaded areas while ensuring that each user receives adequate service. Users can be moved from overloaded base stations to those with lighter loads, maintaining overall system performance and user experience. The challenge lies in ensuring that all user demands are met while adhering to base station capacity limits.
+
+**Objective:** Minimize the load imbalance across base stations.
+
+**Constraints:**
+1. Each base station can support a maximum of 20 users.
+2. The maximum transmit power per user is limited to 1 Watt.
+3. The inter-base station communication delay must remain below 50 ms.
+**Channel Gain Formula:**
+The channel gain for the load balancing can be derived from the previously mentioned gain formula, indicating how changes in user distribution affect the channel quality.
+
+### Variable Parameters:
+- Number of base stations: 4
+- Maximum users per base station: 20
+- Maximum transmit power per user: 1 Watt
+- Acceptable inter-base station communication delay: 50 ms

@@ -1,0 +1,22 @@
+**Interference-Aware Spectrum Allocation in Cognitive Radio Networks**
+
+### Problem Description:
+
+In a cognitive radio network (CRN), secondary users (SUs) dynamically access the spectrum while ensuring minimal interference to primary users (PUs). The objective is to allocate spectrum efficiently to SUs to maximize network throughput while maintaining interference constraints for PUs. The optimization problem considers spectrum sensing accuracy, power control, and dynamic spectrum availability.
+
+**Objective:** Maximize the total throughput of secondary users while protecting primary user transmissions.
+
+**Constraints:**
+
+1. The interference caused to any PU must not exceed a predefined threshold.
+2. Each SU can only transmit on available channels detected through spectrum sensing.
+3. The sum of power allocated to each SU must not exceed its maximum power budget.
+
+### Variable Parameters:
+
+- Number of primary users: 5
+- Number of secondary users: 20
+- Total available spectrum: 100 MHz
+- Maximum transmission power per SU: 2 Watts
+- Interference threshold per PU: -90 dBm
+- Spectrum sensing accuracy: 95%

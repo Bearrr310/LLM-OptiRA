@@ -1,0 +1,22 @@
+**Dynamic User Association and Resource Allocation in Heterogeneous Networks**
+
+### Problem Description:
+
+In a heterogeneous network with macro and small cells, the objective is to optimize the association of users to base stations while allocating power and bandwidth resources efficiently. Users experience varying channel conditions, and the system must dynamically reallocate resources to balance the load and enhance overall network performance.
+
+**Objective:** Minimize system congestion while maximizing user throughput.
+
+**Constraints:**
+
+1. Each user must be associated with one base station.
+2. The load on each base station must not exceed its capacity.
+3. Users must receive a minimum guaranteed data rate.
+
+### Variable Parameters:
+
+- Number of macro base stations: 3
+- Number of small cells: 5
+- Number of users: 50
+- Maximum bandwidth per user: 10 MHz
+- Minimum required data rate per user: 5 Mbps
+- Path loss model: Distance-based with shadowing variance of 6 dB

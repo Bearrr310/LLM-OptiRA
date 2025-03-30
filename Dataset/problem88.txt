@@ -1,0 +1,20 @@
+### **Load Balancing in 5G Ultra-Dense Networks**
+
+### Problem Description:
+
+In ultra-dense networks (UDNs), users should be efficiently distributed among multiple small cells to prevent congestion and optimize network performance.
+
+**Objective:** Minimize the load variance across base stations to achieve load balancing.
+
+**Constraints:**
+
+1. Each user must be assigned to exactly one base station.
+2. The number of users per small cell must not exceed its capacity.
+3. The signal quality at each user must be above a minimum SINR threshold.
+
+### Variable Parameters:
+
+- Number of small cells: 10
+- Number of users: 50
+- Maximum users per small cell: 10
+- Minimum SINR per user: 7 dB

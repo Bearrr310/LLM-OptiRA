@@ -1,0 +1,22 @@
+**Joint Power and Subcarrier Allocation in OFDMA Networks**
+
+### Problem Description:
+
+In an orthogonal frequency-division multiple access (OFDMA) network, the aim is to allocate power and subcarriers to users to maximize spectral efficiency while ensuring quality of service (QoS) constraints. The optimization involves dynamically distributing resources based on channel conditions and user demands.
+
+**Objective:** Maximize spectral efficiency while meeting QoS requirements.
+
+**Constraints:**
+
+1. The sum of power allocated across all subcarriers must not exceed the total available power.
+2. Each user must receive at least one subcarrier.
+3. The total bandwidth must be distributed among all active users.
+
+### Variable Parameters:
+
+- Number of users: 12
+- Number of subcarriers: 24
+- Maximum transmit power per base station: 30 Watts
+- Minimum required data rate per user: 3 Mbps
+- Subcarrier bandwidth: 180 kHz
+- Noise power spectral density:  10^{-11}Watts/Hz

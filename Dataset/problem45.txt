@@ -1,0 +1,22 @@
+**Latency-Constrained Resource Allocation in Edge Computing**
+
+### Problem Description:
+
+In an edge computing network, the goal is to allocate computational and communication resources to minimize task processing latency while ensuring efficient resource utilization. Tasks must be assigned to edge servers based on available processing power and network capacity.
+
+**Objective:** Minimize end-to-end latency for all user tasks.
+
+**Constraints:**
+
+1. Each task must be assigned to one edge server.
+2. The computational load on each server must not exceed its processing capacity.
+3. The communication delay must be within an acceptable threshold.
+
+### Variable Parameters:
+
+- Number of edge servers: 4
+- Number of user devices: 30
+- Maximum processing capacity per server: 10 GHz
+- Maximum allowable latency per task: 50 ms
+- Network bandwidth: 100 Mbps per server
+- Task data size range: 50 MB to 500 MB

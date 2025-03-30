@@ -1,0 +1,19 @@
+### **Joint Backhaul and Access Link Optimization**
+
+### **Problem Description:**
+
+In heterogeneous networks, backhaul links must be optimized along with access links to improve network efficiency.
+
+**Objective:** Maximize the total network throughput while maintaining backhaul constraints.
+
+**Constraints:**
+
+1. The total backhaul capacity must not be exceeded.
+2. Each user must have a minimum required data rate.
+
+**Variable Parameters:**
+
+- Number of small cells: 5
+- Backhaul capacity per small cell: 500 Mbps
+- Minimum data rate per user: 5 Mbps
+- Total number of users: 30

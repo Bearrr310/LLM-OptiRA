@@ -1,0 +1,16 @@
+Joint Spectrum and Power Allocation in Cognitive Radio Networks
+Problem Description:
+Cognitive Radio (CR) networks allow secondary users (SUs) to access the spectrum of primary users (PUs) when it's not in use. The challenge is to allocate spectrum and power optimally to maximize secondary user throughput while ensuring primary user interference remains within acceptable limits.
+
+Objective: Maximize the sum rate of secondary users while limiting interference to primary users.
+Constraints:
+
+The interference caused by SUs to PUs must not exceed a predefined threshold.
+The total transmission power of all SUs must remain within a given budget.
+Each SU must achieve a minimum required SINR for reliable communication.
+Variable Parameters:
+Number of primary users: 5
+Number of secondary users: 10
+Maximum SU transmit power: 23 dBm
+Maximum interference threshold for PUs: -90 dBm
+Minimum SINR per SU: 8 dB

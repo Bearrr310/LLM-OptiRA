@@ -1,0 +1,13 @@
+汇总结果:
+D:\SEU\LLM\OptiRA\main_o_model.py 输出: ['[1,1]', '[1,1]', '[1,1]', '[None,None]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[None,None]', '[0,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[0,1]']
+D:\SEU\LLM\OptiRA\main_o_model_3.5.py 输出: ['[1,1]', '[1,1]', '[None,None]', '[0,0]', '[None,None]', '[0,1]', '[1,1]', '[0,0]', '[0,0]', '[0,0]', '[1,1]', '[None,None]', '[1,1]', '[0,0]', '[None,None]', '[None,None]', '[1,1]', '[0,0]', '[1,1]', '[0,0]']
+
+每个问题的标志计数:
+D:\SEU\LLM\OptiRA\main_o_model.py - 问题 21 的成功标志总和: 5, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main_o_model.py - 问题 22 的成功标志总和: 5, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main_o_model.py - 问题 23 的成功标志总和: 4, 执行标志总和: 4
+D:\SEU\LLM\OptiRA\main_o_model.py - 问题 24 的成功标志总和: 2, 执行标志总和: 4
+D:\SEU\LLM\OptiRA\main_o_model_3.5.py - 问题 21 的成功标志总和: 3, 执行标志总和: 3
+D:\SEU\LLM\OptiRA\main_o_model_3.5.py - 问题 22 的成功标志总和: 1, 执行标志总和: 2
+D:\SEU\LLM\OptiRA\main_o_model_3.5.py - 问题 23 的成功标志总和: 3, 执行标志总和: 3
+D:\SEU\LLM\OptiRA\main_o_model_3.5.py - 问题 24 的成功标志总和: 0, 执行标志总和: 0

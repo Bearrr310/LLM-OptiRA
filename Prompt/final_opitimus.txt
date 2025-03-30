@@ -1,0 +1,140 @@
+
+\math_formulation
+To construct a complete mathematical formula for an optimization problem based on the provided input, we need to define:
+
+1. **Objective Function**: This is the main function we want to either maximize or minimize.
+2. **Constraints**: These are the conditions that must be satisfied for feasible solutions.
+3. **Other Variables**: These variables will provide context to the optimization problem, particularly channel condition \( h \) or other quantities.
+
+Let's assume we are dealing with a resource allocation problem in a network where we want to maximize throughput considering channel conditions. 
+
+### Formulation
+
+1. **Objective Function**:
+
+   Let's denote \( R \) as the throughput (rate) we want to maximize.
+
+   \[
+   R = \sum_{i=1}^{N} \log(1 + \frac{P_i |h_i|^2}{N_0}) 
+   \]
+
+   where:
+   - \( N \): Total number of users (or channels).
+   - \( P_i \): Power allocated to user \( i \).
+   - \( h_i \): Channel condition (gain) for user \( i \).
+   - \( N_0 \): Noise power spectral density.
+
+2. **Constraints**:
+
+   - **Power Constraint**:
+   
+     The total power allocated should not exceed the available power \( P_{max} \):
+
+     \[
+     \sum_{i=1}^{N} P_i \leq P_{max}
+     \]
+
+   - **Non-negativity Constraint**:
+   
+     Power allocated to each user cannot be negative:
+
+     \[
+     P_i \geq 0, \quad \forall i
+     \]
+
+   - **Channel Condition**:
+   
+     The channel gain \( h_i \) can be represented as:
+
+     \[
+     h_i = h_0 \cdot d_i^{-\alpha}
+     \]
+
+     where:
+     - \( h_0 \): Reference channel gain at a reference distance.
+     - \( d_i \): Distance between the base station and user \( i \).
+     - \( \alpha \): Path-loss exponent (typically between 2 and 4).
+
+### Complete Mathematical Problem
+
+Putting everything together, the optimization problem can be formulated as:
+
+\[
+\text{Maximize } R = \sum_{i=1}^{N} \log\left(1 + \frac{P_i |h_i|^2}{N_0}\right) 
+\]
+
+subject to:
+
+\[
+\sum_{i=1}^{N} P_i \leq P_{max}
+\]
+
+\[
+P_i \geq 0, \quad \forall i
+\]
+
+where 
+
+\[
+h_i = h_0 \cdot d_i^{-\alpha}
+\]
+
+### Output Specifications
+
+Based on the objective function above, we want to maximize the throughput \( R \):
+
+**Optimization Flag**: 
+
+\[
+[Optimization Flag: 1]
+\]
+
+This indicates that we want to maximize the objective function. 
+
+### Summary
+
+- **Objective Function**: Maximize throughput \( R \).
+- **Constraints**: Total power constraint and non-negativity constraints.
+- **Channel Condition**: Defined in terms of reference gain, distance, and path-loss exponent. 
+
+Make sure to adapt the variables \( N, P_{max}, h_0, d_i, N_0, \alpha \) based on the specific problem scenario or dataset you are working with.
+
+\generate_code
+
+import numpy as np
+from scipy.optimize import minimize
+
+# Parameters
+N = 5  # Number of users
+P_max = 10  # Maximum power
+h_0 = 1  # Reference channel gain
+alpha = 2  # Path-loss exponent
+N_0 = 1e-9  # Noise power spectral density
+d = np.array([1, 2, 3, 4, 5])  # Distances to users
+
+# Calculate channel gains
+h = h_0 * (d ** -alpha)
+
+# Objective function
+def objective(P):
+    R = -np.sum(np.log(1 + (P * (h ** 2)) / N_0))  # Negative for minimization
+    return R
+
+# Constraints
+constraints = [{'type': 'ineq', 'fun': lambda P: P_max - np.sum(P)},  # Total power constraint
+               {'type': 'ineq', 'fun': lambda P: P}]  # Non-negativity constraints
+
+# Initial power allocation (equal to start)
+initial_P = np.ones(N) * (P_max / N)
+
+# Solve the optimization problem
+solution = minimize(objective, initial_P, constraints=constraints, method='SLSQP')
+
+# Output the results
+optimized_P = solution.x
+max_throughput = -solution.fun  # Max throughput (positive)
+
+print("Max Throughput R:", max_throughput)
+print("Optimized Power Allocation P:", optimized_P)
+
+

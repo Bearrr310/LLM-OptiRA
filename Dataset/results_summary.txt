@@ -1,0 +1,23 @@
+汇总结果:
+D:\SEU\LLM\OptiRA\main.py 输出: ['[1,1]', '[0,1]', '[0,1]', '[1,1]', '[0,1]', '[0,1]', '[0,1]', '[0,1]', '[1,1]', '[0,1]', '[0,1]', '[0,1]', '[1,1]', '[1,1]', '[0,1]', '[0,1]', '[1,1]', '[0,1]', '[1,1]', '[1,1]']
+D:\SEU\LLM\OptiRA\main_COT_refine.py 输出: ['[0,0]', '[0,1]', '[1,1]', '[1,1]', '[0,0]', '[0,0]', '[1,1]', '[0,0]', '[0,1]', '[1,1]', '[1,1]', '[0,1]', '[1,1]', '[1,1]', '[0,1]', '[1,1]', '[0,1]', '[1,1]', '[1,1]', '[0,0]']
+D:\SEU\LLM\OptiRA\main_PS_refine.py 输出: ['[0,1]', '[1,1]', '[0,1]', '[0,0]', '[0,1]', '[0,0]', '[0,1]', '[0,1]', '[1,1]', '[0,1]', '[0,1]', '[0,1]', '[1,1]', '[1,1]', '[0,1]', '[1,1]', '[1,1]', '[1,1]', '[0,1]', '[1,1]']
+
+每个问题的标志计数:
+D:\SEU\LLM\OptiRA\main.py - 问题 51 的成功标志总和: 4, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main.py - 问题 52 的成功标志总和: 1, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main.py - 问题 53 的成功标志总和: 1, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main.py - 问题 54 的成功标志总和: 2, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main_COT_refine.py - 问题 51 的成功标志总和: 1, 执行标志总和: 3
+D:\SEU\LLM\OptiRA\main_COT_refine.py - 问题 52 的成功标志总和: 3, 执行标志总和: 4
+D:\SEU\LLM\OptiRA\main_COT_refine.py - 问题 53 的成功标志总和: 4, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main_COT_refine.py - 问题 54 的成功标志总和: 2, 执行标志总和: 3
+D:\SEU\LLM\OptiRA\main_PS_refine.py - 问题 51 的成功标志总和: 3, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main_PS_refine.py - 问题 52 的成功标志总和: 3, 执行标志总和: 4
+D:\SEU\LLM\OptiRA\main_PS_refine.py - 问题 53 的成功标志总和: 0, 执行标志总和: 5
+D:\SEU\LLM\OptiRA\main_PS_refine.py - 问题 54 的成功标志总和: 2, 执行标志总和: 4
+
+每个程序的成功率和执行率:
+D:\SEU\LLM\OptiRA\main.py 的成功率: 0.4, 执行率: 1.0
+D:\SEU\LLM\OptiRA\main_COT_refine.py 的成功率: 0.5, 执行率: 0.75
+D:\SEU\LLM\OptiRA\main_PS_refine.py 的成功率: 0.4, 执行率: 0.9

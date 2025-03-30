@@ -1,0 +1,67 @@
+Remember your job: 
+1、Following the input and output format, aligning with the length and context.
+
+Example:
+1:
+Input: ### **Multi-cell Power Allocation Problem for Energy Efficiency Optimization**
+### Problem Description:
+In a multi-cell network, the objective is to optimize power allocation for each base station to maximize the overall energy efficiency of the network. The energy efficiency is defined as the total data rate divided by the total power consumption. Each base station serves multiple users, and the power transmitted must not exceed the maximum allowable limit. The data rate of each user depends on the signal-to-interference-plus-noise ratio (SINR), which in turn depends on the allocated power, channel gain, and interference from neighboring base stations. The optimization also considers the constraints on user fairness and ensures that each user's minimum rate requirement is satisfied.
+
+### Parameter Description:
+- **Channel Gain**: The channel gain follows a **Rayleigh fading model** for urban environments where users experience fast-moving conditions. The channel gain \(G = |h|^2\), where \(h\) is a complex Gaussian random variable, representing multipath fading.
+- **Number of Cells**: 5
+- **Number of Users per Cell**: 10
+- **Maximum Transmit Power per Base Station**: 5 W
+- **Noise Power Density**: \(10^{-9} \text{ W/Hz}\)
+- **Minimum Rate Requirement per User**: 0.5 Mbps
+- **Total Bandwidth**: 20 MHz
+- **Interference Coefficient**: Defined by cross-cell interference, specific to user location.
+
+Output:{
+  "objective_function": {
+    "expression": "maximize sum(R_i for i in range(N))",
+    "description": "Maximize the total energy efficiency, defined as total data rate divided by total power consumption."
+  },
+  "optimization_flag": 1,
+  "constraints": [
+    {
+      "expression": "sum(P_i for i in range(N)) <= P_max",
+      "description": "Total transmitted power must not exceed the maximum allowable limit."
+    },
+    {
+      "expression": "sum(B_i for i in range(N)) <= B_total",
+      "description": "Total allocated bandwidth must not exceed the available bandwidth."
+    },
+    {
+      "expression": "R_i >= R_min for all i in range(N)",
+      "description": "Each user must receive at least the minimum required data rate."
+    },
+    {
+      "expression": "h_i = |h_i_complex|^2",
+      "description": "Channel gain is modeled as the squared magnitude of a complex Gaussian variable."
+    },
+    {
+      "expression": "SINR_i = P_i * h_i / (I_i + N_0 * B_i)",
+      "description": "Signal-to-Interference-plus-Noise Ratio (SINR) definition."
+    },
+    {
+      "expression": "R_i = B_i * log2(1 + SINR_i)",
+      "description": "Data rate is determined by the allocated bandwidth and SINR."
+    }
+  ],
+  "variables": {
+    "P_i": "Power allocated to user i",
+    "B_i": "Bandwidth allocated to user i",
+    "h_i": "Channel gain for user i",
+    "SINR_i": "Signal-to-Interference-plus-Noise Ratio for user i",
+    "R_i": "Data rate for user i"
+  },
+  "constants": {
+    "P_max": 5,
+    "B_total": 20,
+    "R_min": 0.5,
+    "N_0": "10^-9",
+    "N": 50,
+    "I_i": "Interference from neighboring base stations"
+  }
+}

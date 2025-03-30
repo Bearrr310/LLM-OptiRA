@@ -1,0 +1,10 @@
+TDMA System (Time and Power Allocation)
+**Problem Description:**
+In a multi-user TDMA system, the goal is to maximize the total data throughput by optimizing time slots and power allocation. Users transmit sequentially in their allocated time slots, with the objective of maximizing the sum-rate across all users. The system operates with a time-division protocol, and the channel gain for each user follows a Rayleigh fading model.
+The constraints include time allocation limits, total time usage, power constraints per user, and a total system power budget. Interference is also limited to ensure proper user communication.
+Parameters:**
+- **Number of Users**: 4 users.
+- **Time Slot Allocation**: The maximum time allocated to any user is 0.4 units, and the total time available in the system is 1 unit.
+- **Power Allocation**: The maximum power for each user is 30 Watts. The total system power budget is 100 Watts.
+- **Channel Gain**: The channel gain follows a Rayleigh fading model. For example, the user-to-user direct channel gain \( |h_{ii}|^2 = 1.2 \), and cross-user interference gain \( |h_{ij}|^2 = 0.15 \) for all \( i \neq j \).
+- **Interference Limit**: Interference between users must not exceed 3 dB.

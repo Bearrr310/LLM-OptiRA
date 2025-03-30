@@ -1,0 +1,20 @@
+### **Interference-Aware Power Control in Device-to-Device (D2D) Networks**
+
+### Problem Description:
+
+Device-to-Device (D2D) communication allows direct communication between devices without routing through a base station. The goal is to optimize power control to maximize system throughput while minimizing interference to cellular users.
+
+**Objective:** Maximize the sum rate of D2D pairs while ensuring minimal interference to cellular users.
+
+**Constraints:**
+
+1. The interference from D2D users to cellular users must not exceed a predefined threshold.
+2. The total transmit power of all D2D pairs must remain within a given budget.
+3. Each D2D link must maintain a minimum SINR for successful communication.
+
+### Variable Parameters:
+
+- Number of D2D pairs: 6
+- Maximum D2D transmit power: 20 dBm
+- Maximum interference threshold for cellular users: -100 dBm
+- Minimum SINR per D2D link: 10 dB

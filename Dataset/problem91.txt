@@ -1,0 +1,20 @@
+### **Energy-Efficient Joint Beamforming and Power Allocation**
+
+### Problem Description:
+
+Beamforming can enhance communication performance, but it also increases power consumption. The challenge is to balance energy efficiency and performance.
+
+**Objective:** Minimize the total power consumption while ensuring a target SINR for all users.
+
+**Constraints:**
+
+1. The total beamforming power must not exceed a predefined limit.
+2. The SINR at each user must be greater than a threshold.
+3. The beamforming weight vectors must satisfy unit modulus constraints.
+
+### Variable Parameters:
+
+- Number of users: 8
+- Number of antennas per base station: 16
+- Maximum total power budget: 30 dBm
+- Minimum SINR per user: 10 dB

@@ -1,0 +1,22 @@
+**Delay-Constrained Joint Power and Bandwidth Allocation in Satellite Networks**
+
+### Problem Description:
+
+In a satellite communication system, power and bandwidth resources need to be optimally allocated to users to ensure quality of service while minimizing latency. The objective is to maximize the total system throughput while ensuring each user meets a latency constraint.
+
+**Objective:** Maximize system throughput while ensuring latency constraints are met.
+
+**Constraints:**
+
+1. The latency for each user must not exceed a predefined threshold.
+2. The sum of bandwidth allocated to all users must not exceed the total available bandwidth.
+3. The total transmit power must not exceed the satellite’s power budget.
+
+### Variable Parameters:
+
+- Number of users: 12
+- Total available bandwidth: 500 MHz
+- Maximum satellite transmit power: 20 Watts
+- Maximum latency per user: 50 ms
+- Noise power spectral density:  4× 10^{-10}Watts/Hz
+- Path loss model: Free-space path loss with fading margin of 3 dB

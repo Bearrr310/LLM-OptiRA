@@ -1,0 +1,11 @@
+### MIMO System (Beamforming and Power Allocation)
+**Problem Description:**
+In a MIMO system with multiple users, the aim is to optimize the beamforming vectors and power allocation to maximize the sum-rate while minimizing inter-user interference. The system uses multiple antennas to serve users, and the optimization involves determining the best beamforming vector for each user to ensure minimal interference and high data rates.
+The constraints include total power budget, interference limits, and normalization conditions for the beamforming vectors.
+**Parameters:**
+- **Number of Users**: 4 users.
+- **Number of Antennas**: 8 antennas.
+- **Power Allocation**: The maximum power per user is 15 Watts, and the total system power budget is 60 Watts.
+- **Beamforming Vectors**: Each user is assigned a normalized beamforming vector.
+- **Channel Gain**: The channel follows a Rician fading model. For example, the direct channel gain \( |h_{ii}|^2 = 1.0 \), and cross-user interference gain \( |h_{ij}|^2 = 0.1 \).
+- **Interference Limit**: The interference between users must be kept below 6 dB.

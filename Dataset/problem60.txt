@@ -1,0 +1,20 @@
+### **Rate Maximization in NOMA-Based 5G Networks**
+
+### Problem Description:
+
+Non-Orthogonal Multiple Access (NOMA) enables multiple users to share the same frequency resources by employing power-domain multiplexing. The challenge is to allocate power efficiently to maximize the sum rate while ensuring fairness among users.
+
+**Objective:** Maximize the total network sum rate while maintaining fairness in power allocation.
+
+**Constraints:**
+
+1. The sum power of all NOMA users must not exceed the base station’s total power budget.
+2. Users with weaker channels must receive higher power to ensure fairness.
+3. Each user must achieve a minimum SINR requirement for successful decoding.
+
+### Variable Parameters:
+
+- Number of NOMA users: 8
+- Maximum base station power: 30 dBm
+- Minimum SINR per user: 10 dB
+- Power allocation fairness factor: 0.2 (ensuring weaker users receive sufficient power)

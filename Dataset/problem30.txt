@@ -1,0 +1,10 @@
+### Optimizing Power Allocation
+This optimization problem aims to optimize the power allocation for a WLAN S1G waveform transmitted through a TGah SISO channel, thereby maximizing the overall network capacity. Effective power allocation is crucial in ensuring that each user in a multi-user environment receives adequate signal strength while minimizing interference.
+
+To achieve this goal, several constraints must be satisfied. First, the total power allocated to all users must not exceed a predefined limit, ensuring efficient use of available resources. Second, each user must receive a minimum power level to maintain satisfactory communication quality, which is set at 0.1 watts. The SNR for each user should be maintained at a minimum of 15 dB to guarantee reliable communication. Additionally, the interference among users must be controlled to keep it below a specified threshold, allowing for optimal performance in the shared environment.
+
+### Variable Parameters
+- Total Power Limit: The maximum total power available for allocation is set at 5 watts.
+- Minimum Power per User: Each user is guaranteed a minimum power level of 0.1 watts.
+- SNR: A minimum SNR of 15 dB is required for reliable communication for each user.
+- Interference Threshold: The interference level must be kept below 0.5 watts to minimize degradation of service.

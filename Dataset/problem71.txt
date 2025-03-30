@@ -1,0 +1,20 @@
+### **Joint User Scheduling and Power Allocation in NOMA Systems**
+
+### Problem Description:
+
+Non-Orthogonal Multiple Access (NOMA) enables multiple users to share the same frequency resources, requiring careful power allocation to maintain fairness.
+
+**Objective:** Maximize sum rate while ensuring fairness among NOMA users.
+
+**Constraints:**
+
+1. The power allocated to each user must not exceed the base station’s maximum transmission power.
+2. The difference in power levels between users must satisfy the SIC decoding condition.
+3. Each user must achieve a minimum required data rate.
+
+### Variable Parameters:
+
+- Number of NOMA users: 6
+- Base station power limit: 30 dBm
+- Minimum data rate per user: 1 Mbps
+- SIC decoding constraint: At least 6 dB difference between power levels

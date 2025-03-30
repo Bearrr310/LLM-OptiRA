@@ -1,0 +1,12 @@
+OFDMA System (Subcarrier and Power Allocation)
+**Problem Description:**
+In an OFDMA system, the aim is to maximize the overall data rate by optimizing the allocation of subcarriers and power to each user. The system is divided into subcarriers, and the optimization ensures that each subcarrier is assigned to only one user while maximizing the sum-rate across the entire system. The channel follows a frequency-selective fading model, where channel gains vary across subcarriers.
+
+The constraints include limits on subcarrier allocation, power per subcarrier, total power per user, and total system power. Cross-user interference must also be minimized.
+**Parameters:**
+- **Number of Users**: 5 users.
+- **Number of Subcarriers**: 50 subcarriers.
+- **Subcarrier Bandwidth**: Each subcarrier has a bandwidth of 200 kHz.
+- **Power Allocation**: The maximum power per subcarrier is 5 Watts. Each user’s total power budget is 25 Watts.
+- **Channel Gain**: The channel gain is frequency-selective. For example, the direct channel gain per subcarrier can be \( |h_{ii}|^2 = 0.9 \), and the cross-user interference gain per subcarrier can be \( |h_{ij}|^2 = 0.1 \).
+- **Interference Limit**: Cross-user interference must remain below 7 dB.

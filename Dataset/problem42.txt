@@ -1,0 +1,22 @@
+**Energy-Efficient Beamforming in Massive MIMO**
+
+### Problem Description:
+
+In a massive MIMO system, the goal is to optimize beamforming vectors to minimize the total energy consumption while ensuring a minimum SINR requirement for each user. Beamforming plays a critical role in directing signals toward users efficiently, and the optimization must balance power usage and beamforming effectiveness. The problem formulation considers the trade-off between energy efficiency and system performance.
+
+**Objective:** Minimize total energy consumption while maintaining SINR requirements.
+
+**Constraints:**
+
+1. The total transmission power cannot exceed the power budget.
+2. Each user must achieve a minimum SINR.
+3. Beamforming weights must be optimized to minimize interference between users.
+
+### Variable Parameters:
+
+- Number of base station antennas: 64
+- Number of users: 16
+- Total power budget: 50 Watts
+- Minimum SINR per user: 15 dB
+- Beamforming model: Zero-forcing (ZF) and regularized ZF
+- Path loss model: Log-distance path loss model with shadowing variance of 8 dB

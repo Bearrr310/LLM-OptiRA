@@ -1,0 +1,9 @@
+### Problem Description for Optimization Problem : Minimizing Path Loss
+The goal of this optimization problem is to minimize the path loss experienced by a WLAN S1G waveform when transmitted through a TGah SISO channel. Path loss is a crucial factor that affects the overall performance of wireless communication systems, especially in environments characterized by significant interference and obstacles.
+To achieve the minimization of path loss, several constraints must be satisfied. The SNR at the receiver must be maintained at a minimum of 10 dB to ensure that the received signal is distinguishable from background noise. Additionally, the maximum allowable path loss is set at 100 dB, which ensures that the signal remains usable despite environmental challenges. The ambient temperature for the system's operation is fixed at 290 K, reflecting standard conditions for performance evaluation. Lastly, the receiver's bandwidth should not exceed the channel bandwidth to prevent performance degradation due to bandwidth limitations.
+
+### Variable Parameters
+- Path Loss: The maximum allowable path loss is set at 100 dB.
+- SNR: A minimum SNR of 10 dB is required for reliable communication.
+- Temperature: The operating temperature for the system is fixed at 290 K.
+- Bandwidth: The receiver's bandwidth is capped at 2 MHz, matching the channel bandwidth.

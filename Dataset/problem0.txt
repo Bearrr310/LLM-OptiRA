@@ -1,0 +1,24 @@
+### Problem Description
+
+In a multi-user communication system, the objective is to maximize the overall network capacity by jointly optimizing power and spectrum allocation among users. Each user can transmit information over a designated subcarrier, and the capacity of their transmission is influenced by both the power they allocate and the channel conditions. The channel between the user and the base station is characterized by a gain parameter, which varies depending on the user's location and the interference from other users.
+
+The optimization problem consists of maximizing the sum of the logarithm of the signal-to-interference-plus-noise ratio (SINR) for each user. The SINR is determined by the power allocated to the user and the interference caused by other users sharing the same subcarriers. Constraints include the maximum transmit power for each user, the condition that each user can only occupy one subcarrier, limitations on the bandwidth per subcarrier, and a total power budget that must not be exceeded across all users.
+
+### Variable Parameters
+
+1. **Number of Users**: 20 users, reflecting a typical scenario in urban environments with high user density.
+2. **Maximum Power per User**: Each user has a maximum transmit power limit of 5 watts, which complies with regulatory standards for mobile communication devices.
+3. **Total Power Budget**: The total power available for the network is set at 200 watts, ensuring efficient energy use across all users.
+4. **Subcarriers**: The system utilizes 10 subcarriers for transmission, each with a bandwidth of 200 kHz, suitable for LTE or similar communication protocols.
+5. **Channel Gain**: Channel gain for each user can be modeled using a path loss model. For example, a simplified path loss model in a urban scenario could be:
+   \[
+   g_i = 10^{\left(-\frac{20 \log_{10}(d_i) + 20 \log_{10}(f) + 32.44}{10}\right)}
+   \]
+   where \(d_i\) is the distance from the base station to user \(i\) (in km), and \(f\) is the frequency (e.g., 1800 MHz).
+6. **Interference Levels**: The interference can be modeled based on the total power allocated to users sharing subcarriers. For instance, if multiple users share the same subcarrier, the interference can be estimated as:
+   \[
+   I_i = \sum_{j \neq i} P_j g_{ij}
+   \]
+   where \(g_{ij}\) represents the channel gain from user \(j\) to user \(i\).
+
+These specific values and constructions will help in building a robust mathematical model to solve the optimization problem effectively. If you need further adjustments or additional details, just let me know!

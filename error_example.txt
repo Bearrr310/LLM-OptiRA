@@ -1,0 +1,225 @@
+Remember your job: 
+1、Following the input and output format, aligning with the length and context.
+
+Example:
+
+1:
+Input: 
+Inf错误代码：
+
+```python
+
+import cvxpy as cp
+import numpy as np
+
+# Parameters
+N = 5  # Number of users
+P_max = 10  # Maximum power for each user
+P_k = 30  # Total power budget for the base station
+I_max = 15  # Maximum allowable interference
+gamma = np.array([1.5, 1.5, 1.5, 1.5, 1.5])  # SINR thresholds for each user
+sigma = 0.1  # Noise power
+
+# Channel conditions (example values)
+h_ii = np.array([1.0, 1.0, 1.0, 1.0, 1.0])  # Channel gain for intended links
+h_ij = np.array([[0.1, 0.2, 0.1, 0.3, 0.1],  # Interference channel gains
+                 [0.2, 0.1, 0.3, 0.1, 0.1],
+                 [0.1, 0.3, 0.1, 0.2, 0.1],
+                 [0.3, 0.1, 0.2, 0.1, 0.1],
+                 [0.1, 0.1, 0.1, 0.1, 0.1]])
+
+# Optimization variable
+p = cp.Variable(N, nonneg=True)
+
+# Objective function: Minimize total power
+objective = cp.Minimize(cp.sum(p))
+
+# Constraints
+constraints = []
+
+# Power constraints
+constraints += [p <= P_max]
+
+# SINR constraints
+for i in range(N):
+    interference = cp.sum(h_ij[i, :] * p) - h_ij[i, i] * p[i]  # Total interference
+    constraints += [h_ii[i]**2 * p[i] >= gamma[i] * (interference + sigma)]  # Adjusted noise floor
+
+# Interference constraints
+for i in range(N):
+    constraints += [cp.sum(h_ij[i, :] * p) <= I_max]
+
+# Base station power budget constraint (relaxed slightly)
+constraints += [cp.sum(p) <= P_k]  # Removed relaxation for strict enforcement
+
+# Formulate the problem
+problem = cp.Problem(objective, constraints)
+
+# Solve the problem
+problem.solve()
+
+# Output results
+print("Minimum Total Power:", problem.value)
+print("Optimal Power Allocations:", p.value)
+
+
+```
+
+错误信息：
+
+Optimal Power Allocations: None
+Minimum Total Power: inf
+
+Output:
+import cvxpy as cp
+import numpy as np
+
+# Parameters
+N = 5  # Number of users
+P_max = 10  # Maximum power for each user
+P_k = 30  # Total power budget for the base station
+I_max = 20  # Relaxed maximum allowable interference
+gamma = np.array([1.0, 1.0, 1.0, 1.0, 1.0])  # Slightly reduced SINR thresholds
+sigma = 0.1  # Noise power
+
+# Channel conditions (example values)
+h_ii = np.array([1.0, 1.0, 1.0, 1.0, 1.0])  # Channel gain for intended links
+h_ij = np.array([[0.1, 0.2, 0.1, 0.3, 0.1],  # Interference channel gains
+                 [0.2, 0.1, 0.3, 0.1, 0.1],
+                 [0.1, 0.3, 0.1, 0.2, 0.1],
+                 [0.3, 0.1, 0.2, 0.1, 0.1],
+                 [0.1, 0.1, 0.1, 0.1, 0.1]])
+
+# Optimization variable
+p = cp.Variable(N, nonneg=True)
+
+# Objective function: Minimize total power
+objective = cp.Minimize(cp.sum(p))
+
+# Constraints
+constraints = []
+
+# Power constraints
+constraints += [p <= P_max]
+
+# SINR constraints
+for i in range(N):
+    interference = cp.sum(h_ij[i, :] * p) - h_ij[i, i] * p[i]  # Total interference
+    constraints += [h_ii[i]**2 * p[i] >= gamma[i] * (interference + sigma)]  # Adjusted noise floor
+
+# Interference constraints
+for i in range(N):
+    constraints += [cp.sum(h_ij[i, :] * p) <= I_max]  # Relaxed interference constraint
+
+# Base station power budget constraint
+constraints += [cp.sum(p) <= P_k]  # Base station power constraint
+
+# Formulate the problem
+problem = cp.Problem(objective, constraints)
+
+# Solve the problem
+problem.solve()
+
+# Output results
+print("Minimum Total Power:", problem.value)
+print("Optimal Power Allocations:", p.value)
+
+
+2、Input：
+错误代码：
+
+```jsx
+import cvxpy as cp
+import numpy as np
+
+# Number of users and cells
+num_users = 50
+
+# Parameters
+P_on = 5  # Operational power consumption in watts
+P_max = 1  # Maximum power per user in watts
+P_total = 100  # Total power budget for the network
+sigma = 0.1  # Noise power (example value)
+
+# Initialize channel gains for users
+h_ii = np.random.rand(num_users)  # Example channel gains
+
+# Power allocation variable
+p = cp.Variable(num_users, nonneg=True)
+
+# Objective function: We need to ensure it's DCP compliant
+# We'll calculate the effective capacity separately
+R = cp.log(1 + (h_ii * p) / (sigma + cp.sum(h_ii * p) - h_ii * p))
+
+# The objective is to maximize the sum rate
+objective = cp.Maximize(cp.sum(R))
+
+# Constraints
+constraints = [
+    p <= P_max,  # Power limit per user
+    cp.sum(p) <= P_total - P_on  # Total power budget
+]
+
+# Create the problem
+problem = cp.Problem(objective, constraints)
+
+# Solve the problem
+problem.solve()
+
+# Output results
+print("Optimal value of the objective function:", problem.value)
+print("Optimal power allocation:", p.value)
+
+
+```
+
+错误信息：
+
+cvxpy.error.DCPError: Problem does not follow DCP rules. Specifically:
+The objective is not DCP. Its following subexpressions are not:
+
+Output:
+import numpy as np
+from scipy.optimize import minimize
+
+# 参数设置
+num_users = 50
+P_on = 5  # 操作功耗
+P_max = 1  # 每个用户的最大功率
+P_total = 100  # 总功耗预算
+sigma = 0.1  # 噪声功率
+
+# 初始化信道增益
+h_ii = np.random.rand(num_users)  # 例子信道增益
+
+# 目标函数
+def objective(p):
+    # 避免对数函数导致的负值
+    return -np.sum(np.log(1 + (h_ii * p) / (sigma + np.sum(h_ii * p) - h_ii * p)))
+
+# 约束条件
+def constraint1(p):
+    return P_total - P_on - np.sum(p)  # 总功耗约束
+
+def constraint2(p):
+    return P_max - p  # 每个用户的功率限制
+
+# 初始值
+p0 = np.ones(num_users) * 0.5
+
+# 定义约束
+constraints = [
+    {'type': 'ineq', 'fun': constraint1},
+    {'type': 'ineq', 'fun': constraint2}
+]
+
+# 调用优化器
+result = minimize(objective, p0, constraints=constraints, bounds=[(0, P_max)] * num_users)
+
+# 输出结果
+if result.success:
+    print("Optimal value of the objective function:", -result.fun)
+    print("Optimal power allocation:", result.x)
+
+else:
+    print("Optimization failed:", result.message)

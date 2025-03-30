@@ -1,0 +1,20 @@
+### **Joint Routing and Power Control for Wireless Sensor Networks (WSNs)**
+
+### Problem Description:
+
+WSNs consist of battery-powered nodes that collect and transmit data. The challenge is to design an energy-efficient routing and power control strategy.
+
+**Objective:** Maximize network lifetime while ensuring data reliability.
+
+**Constraints:**
+
+1. The total energy consumed per transmission must remain within the battery capacity.
+2. Each sensor node must forward packets to the sink while minimizing power usage.
+3. The selected routing path must minimize the overall transmission delay.
+
+### Variable Parameters:
+
+- Number of sensor nodes: 30
+- Maximum power per transmission: 5 dBm
+- Battery capacity per node: 5000 mJ
+- Network coverage radius: 500m

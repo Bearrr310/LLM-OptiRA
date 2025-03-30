@@ -1,0 +1,39 @@
+### Time Slot Allocation Problem
+
+**Problem Description:**
+
+In a multi-node communication system, the objective is to allocate a limited number of time slots to different nodes based on their individual requirements. Each node requires a certain number of time slots for its operations, and the goal is to allocate these time slots efficiently while minimizing the discrepancy between the allocated time slots and each node's demand. The problem must adhere to various constraints to ensure a fair and effective distribution of time slots.
+
+---
+
+**Parameters:**
+
+- **Number of Nodes (\(N\))**: \(5\)
+- **Total Available Time Slots (\(T\))**: \(20\)
+- **Time Slot Demand (\(D_i\))**:
+    - Node 1: \(D_1 = 3\)
+    - Node 2: \(D_2 = 2\)
+    - Node 3: \(D_3 = 4\)
+    - Node 4: \(D_4 = 1\)
+    - Node 5: \(D_5 = 5\)
+- **Maximum Time Slots per Node (\(M_i\))**: Each node can be allocated a maximum of its respective demand:
+    - Node 1: \(M_1 = 3\)
+    - Node 2: \(M_2 = 2\)
+    - Node 3: \(M_3 = 4\)
+    - Node 4: \(M_4 = 1\)
+    - Node 5: \(M_5 = 5\)
+- **Allocated Time Slots (\(A_i\))**:
+    - \(A_i\) is the number of time slots allocated to node \(i\). Possible values could be:
+        - Node 1: \(A_1 \in [0, 3]\)
+        - Node 2: \(A_2 \in [0, 2]\)
+        - Node 3: \(A_3 \in [0, 4]\)
+        - Node 4: \(A_4 \in [0, 1]\)
+        - Node 5: \(A_5 \in [0, 5]\)
+- **Total Allocated Time Slots (\(A_{\text{total}}\))**:
+    - \(A_{\text{total}} = A_1 + A_2 + A_3 + A_4 + A_5\)
+- **Total Time Slot Limit**:
+    - The total allocated slots must not exceed the total available time slots: \(A_{\text{total}} \leq 20\)
+- **Unique Time Slot Allocation (\(x_{i,j}\))**:
+    - \(x_{i,j}\) is a binary variable that indicates whether time slot \(j\) is allocated to node \(i\) (1 if allocated, 0 otherwise).
+- **Non-negativity Constraint**:
+    - \(A_i \geq 0\) for all \(i = 1, 2, \ldots, N\)

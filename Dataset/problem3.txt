@@ -1,0 +1,10 @@
+#Problem Description
+In a multi-cell network, the goal is to maximize energy efficiency by optimizing the power allocation among users. Each user communicates over a wireless channel characterized by fading, where the signal strength is influenced by the channel conditions between the base station and the user. The total power used by each user contributes to the overall network's power consumption, which is subject to certain operational constraints. The objective is to maximize the sum of the logarithmic rates achieved by users while ensuring that the total power allocated does not exceed the available power budget for each cell and the entire network. Additionally, each user's power allocation must satisfy individual power limits, and the energy efficiency of each user must exceed a predefined minimum threshold.
+
+#Variable Parameters with Specific Values
+User Count: 50 users in the network.
+Maximum Power Limit: Each user can be allocated a maximum of 2 watts of power.
+Total Available Power for Each Cell: Each cell has a maximum power capacity of 50 watts.
+Minimum Energy Efficiency Threshold: Each user must achieve a minimum energy efficiency of 0.2 bits per joule.
+Overall Network Power Budget: The total power budget for the entire network is 200 watts.
+Channel Conditions: The fading conditions can be characterized by a Rayleigh fading model, with an average signal-to-noise ratio (SNR) of 15 dB for all users.

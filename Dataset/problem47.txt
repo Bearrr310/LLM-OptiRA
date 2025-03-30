@@ -1,0 +1,21 @@
+### **Spectrum and Power Optimization for Cognitive Radio Networks**
+
+### Problem Description:
+
+Cognitive radio networks (CRNs) allow secondary users to opportunistically access spectrum while ensuring no harmful interference to primary users. The challenge is to allocate spectrum and power optimally to maximize secondary user throughput.
+
+**Objective:** Maximize secondary user sum rate while protecting primary users from interference.
+
+**Constraints:**
+
+1. The interference to primary users must not exceed a predefined threshold.
+2. The total transmit power of secondary users must remain within a set budget.
+3. Each secondary user must maintain a minimum SINR.
+
+### Variable Parameters:
+
+- Number of primary users: 5
+- Number of secondary users: 8
+- Maximum interference threshold: -80 dBm
+- Maximum secondary user power: 20 dBm
+- Minimum SINR for secondary users: 10 dB

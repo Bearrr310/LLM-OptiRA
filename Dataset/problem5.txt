@@ -1,0 +1,23 @@
+### Problem Description
+
+In a multi-user communication system, the primary objective is to maximize the overall network capacity by optimizing power allocation among users. Each user transmits data over a specific channel characterized by fading conditions, which significantly influence the channel gain. The signal-to-interference-plus-noise ratio (SINR) for each user is crucial in determining the capacity of their transmission. This SINR is influenced by the power allocated to each user, the channel gain between the user and the base station, and the interference caused by other users.
+
+The channel gain is modeled using a typical path loss model, which incorporates factors such as distance from the base station and environmental conditions. For instance, the channel gain \( |h_{ii}|^2 \) is determined using a path loss formula that accounts for the distance between the user and the base station, combined with a shadowing factor to reflect real-world conditions. Users closer to the base station will experience higher channel gains, while those farther away will see reduced gains, typically modeled using an exponential decay function with respect to distance.
+
+To achieve the optimization objective, the problem is formulated to maximize the sum of the logarithmic rates achieved by each user, ensuring that all users meet their minimum rate requirements. Constraints include maximum power limits for each user, the condition that each user can only occupy one subcarrier, limitations on interference from other users sharing subcarriers, and a total power budget that cannot be exceeded across all users.
+
+### Variable Parameters
+
+1. **Number of Users**: The system supports **10 users**, providing a manageable yet efficient configuration for power allocation.
+2. **Maximum Power Limit**: Each user is allowed to allocate up to **2 watts** of transmit power, in compliance with regulatory standards and hardware limitations.
+3. **Total Power Budget**: The overall power budget available for the network is set at **20 watts**, ensuring optimal energy use across all users.
+4. **Minimum Rate Requirement**: Each user must achieve a minimum rate of **1 Mbps** to ensure satisfactory performance.
+5. **Interference Threshold**: The maximum allowable interference from other users on a single user's transmission is capped at **0.5 watts**, helping to maintain quality of service.
+6. **Noise Power**: The noise power in the system is defined as **0.01 watts**, providing a baseline for calculating the SINR.
+7. **Channel Gain**: The channel gain for each user is defined by a path loss model:
+   \[
+   |h_{ii}|^2 = \frac{P_t}{d^{\alpha}} \cdot 10^{\frac{L}{10}}
+   \]
+   where \( P_t \) is the transmit power, \( d \) is the distance from the base station, \( \alpha \) is the path loss exponent (typically between 2 and 4), and \( L \) represents shadowing effects.
+
+These parameters create a solid foundation for building a mathematical model that effectively addresses the optimization problem.

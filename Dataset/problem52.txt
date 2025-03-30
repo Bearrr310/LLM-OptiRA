@@ -1,0 +1,22 @@
+**Joint Access Point Selection and Power Control in Small Cell Networks**
+
+### Problem Description:
+
+In a dense small cell network, users must be assigned to the optimal access point (AP), and transmit power must be allocated efficiently to maximize system utility. The objective is to determine the optimal AP-user association and power allocation to minimize interference while maximizing total user throughput.
+
+**Objective:** Maximize total network utility by optimizing AP-user association and power control.
+
+**Constraints:**
+
+1. Each user can connect to only one AP.
+2. The sum of power allocated to all users per AP must not exceed its maximum capacity.
+3. Users must achieve at least a minimum SINR threshold.
+
+### Variable Parameters:
+
+- Number of access points: 5
+- Number of users: 20
+- Maximum transmission power per AP: 15 Watts
+- Minimum SINR threshold per user: 10 dB
+- Path loss model: Log-distance path loss with exponent 4.0
+- Noise power spectral density:  3× 10^{-10}Watts/Hz

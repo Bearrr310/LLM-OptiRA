@@ -1,0 +1,20 @@
+### **Coverage Optimization in mmWave Cellular Networks**
+
+### Problem Description:
+
+Millimeter-wave (mmWave) networks provide high data rates but suffer from severe path loss and blockages. The goal is to optimize beamforming and cell deployment to maximize coverage.
+
+**Objective:** Maximize the number of covered users while maintaining high throughput.
+
+**Constraints:**
+
+1. The beamforming gain must compensate for mmWave path loss.
+2. Each base station must not exceed its transmission power budget.
+3. The number of active base stations must be minimized to save energy.
+
+### Variable Parameters:
+
+- Number of base stations: 5
+- Carrier frequency: 28 GHz
+- Maximum base station transmit power: 35 dBm
+- Minimum received power for coverage: -80 dBm

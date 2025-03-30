@@ -1,0 +1,9 @@
+### Minimizing Bit Error Rate (BER)
+In this optimization problem, the objective is to minimize the bit error rate (BER) of a WLAN S1G waveform transmitted through a TGah SISO channel. The BER is a critical performance metric that quantifies the reliability of the communication system and is influenced by various factors, including signal power, noise, and channel characteristics.
+
+To achieve a low BER, several constraints must be adhered to. First, the received signal power must be above a specified minimum level to ensure a reliable communication link. Second, the SNR must be maintained at a minimum threshold of 12 dB to provide sufficient clarity for signal interpretation amidst noise. Additionally, the maximum allowable delay for signal transmission is set to 5 milliseconds, ensuring that real-time applications can function effectively. Lastly, the impact of the receiver noise must be constrained to ensure that the variance remains below 0.2, further enhancing the quality of the received signal.
+### Variable Parameters for Optimization Problem 4
+- Signal Power: The minimum received signal power is fixed at 0.15 watts.
+- SNR: A minimum SNR of 12 dB is required to reduce BER effectively.
+- Delay: The maximum allowable delay for signal transmission is set at 5 milliseconds.
+- Noise Variance: The maximum noise variance for the receiver is capped at 0.2.

@@ -1,0 +1,22 @@
+### **Joint User Association and Load Balancing in Heterogeneous Networks**
+
+### Problem Description:
+
+Heterogeneous Networks (HetNets) consist of macro and small cells to improve coverage and capacity. The goal is to optimize user association and load balancing to maximize overall network efficiency while avoiding congestion at heavily loaded base stations.
+
+**Objective:** Balance user association to maximize network throughput while ensuring load fairness across cells.
+
+**Constraints:**
+
+1. The number of users connected to a small cell must not exceed its capacity.
+2. Each user should be associated with the base station offering the best SINR.
+3. The total transmit power of each base station should remain within its power budget.
+
+### Variable Parameters:
+
+- Number of macro base stations: 2
+- Number of small cells: 4
+- Number of users: 50
+- Maximum macro base station power: 40 dBm
+- Maximum small cell power: 24 dBm
+- Maximum user capacity per small cell: 15

@@ -1,0 +1,20 @@
+### **Optimal Power Control for Device-to-Device (D2D) Communication**
+
+### Problem Description:
+
+D2D communication allows devices to communicate directly without a base station. The challenge is to allocate power efficiently while minimizing interference to cellular users.
+
+**Objective:** Maximize the sum rate of D2D pairs while keeping interference below a predefined limit.
+
+**Constraints:**
+
+1. The interference caused to cellular users must not exceed a threshold.
+2. The power allocated to each D2D pair must not exceed its maximum limit.
+3. Each D2D pair must achieve a minimum rate to maintain communication quality.
+
+### Variable Parameters:
+
+- Number of D2D pairs: 5
+- Maximum transmit power per D2D pair: 18 dBm
+- Maximum interference threshold to cellular users: -95 dBm
+- Minimum rate per D2D pair: 3 Mbps

@@ -1,0 +1,20 @@
+### **Distributed Power Control in D2D Communication Networks**
+
+### Problem Description:
+
+Device-to-Device (D2D) communication allows users to communicate directly without routing through a base station. The challenge is to optimize power control to maximize network efficiency while minimizing interference.
+
+**Objective:** Maximize the sum rate of all D2D pairs while keeping interference to cellular users below a threshold.
+
+**Constraints:**
+
+1. The total transmit power per D2D device must not exceed a given limit.
+2. The interference to nearby cellular users must remain below a predefined threshold.
+3. Each D2D link must maintain a minimum SINR for reliable transmission.
+
+### Variable Parameters:
+
+- Number of D2D pairs: 6
+- Maximum transmit power per D2D device: 15 dBm
+- Interference threshold to cellular users: -100 dBm
+- Minimum SINR per D2D pair: 7 dB

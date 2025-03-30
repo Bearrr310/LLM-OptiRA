@@ -1,0 +1,22 @@
+**Robust Power Control for Interference Management in Device-to-Device (D2D) Communication**
+
+### Problem Description:
+
+In a cellular network with D2D communication, D2D users share spectrum resources with cellular users, causing interference. The goal is to optimize power control for D2D pairs to minimize interference while ensuring cellular users maintain reliable communication.
+
+**Objective:** Minimize interference to cellular users while maximizing D2D sum rate.
+
+**Constraints:**
+
+1. The SINR of cellular users must remain above a predefined threshold.
+2. The transmit power of D2D users must not exceed their individual power budgets.
+3. Each D2D user should achieve a minimum data rate requirement.
+
+### Variable Parameters:
+
+- Number of D2D pairs: 5
+- Number of cellular users: 10
+- Maximum D2D transmit power: 2 Watts
+- Minimum required SINR for cellular users: 12 dB
+- Minimum data rate for each D2D user: 1.5 Mbps
+- Noise power:  4× 10^{-10} Watts

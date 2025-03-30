@@ -1,0 +1,21 @@
+### **Energy-Efficient Power Control in NOMA Systems**
+
+### Problem Description:
+
+Non-Orthogonal Multiple Access (NOMA) allows multiple users to share the same frequency resources by using different power levels. The objective is to optimize power control to maximize energy efficiency while ensuring user fairness.
+
+**Objective:** Maximize energy efficiency while maintaining fairness in power allocation.
+
+**Constraints:**
+
+1. The SINR of each user must meet a minimum threshold to ensure successful decoding.
+2. The power allocated to each user must satisfy the total power budget.
+3. Stronger users should maintain a power gap from weaker users to enable successive interference cancellation (SIC).
+
+### Variable Parameters:
+
+- Number of users: 6
+- Total available power: 30 dBm
+- Minimum SINR per user: 10 dB
+- Power gap between successive users: 3 dB
+- Path loss model: Distance-dependent with Rayleigh fading

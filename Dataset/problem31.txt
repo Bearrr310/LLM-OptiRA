@@ -1,0 +1,13 @@
+### **Multi-cell Power Allocation Problem for Energy Efficiency Optimization**
+### Problem Description:
+In a multi-cell network, the objective is to optimize power allocation for each base station to maximize the overall energy efficiency of the network. The energy efficiency is defined as the total data rate divided by the total power consumption. Each base station serves multiple users, and the power transmitted must not exceed the maximum allowable limit. The data rate of each user depends on the signal-to-interference-plus-noise ratio (SINR), which in turn depends on the allocated power, channel gain, and interference from neighboring base stations. The optimization also considers the constraints on user fairness and ensures that each user's minimum rate requirement is satisfied.
+
+### Parameter Description:
+- **Channel Gain**: The channel gain follows a **Rayleigh fading model** for urban environments where users experience fast-moving conditions. The channel gain \(G = |h|^2\), where \(h\) is a complex Gaussian random variable, representing multipath fading.
+- **Number of Cells**: 5
+- **Number of Users per Cell**: 10
+- **Maximum Transmit Power per Base Station**: 5 W
+- **Noise Power Density**: \(10^{-9} \text{ W/Hz}\)
+- **Minimum Rate Requirement per User**: 0.5 Mbps
+- **Total Bandwidth**: 20 MHz
+- **Interference Coefficient**: Defined by cross-cell interference, specific to user location.

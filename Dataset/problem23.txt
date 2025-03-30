@@ -1,0 +1,17 @@
+### Resource Allocation with User Fairness Problem
+
+**Problem Description**
+
+This optimization problem seeks to maximize the total utility of the wireless network while ensuring fairness among users. The utility function is based on the logarithm of the SINR for each user, promoting equal service quality across the network.
+
+### Variable Parameters
+
+1. **Number of Users**: 7
+2. **Maximum Transmit Power per User**: 15 Watts
+3. **Total Available Power**: 105 Watts
+4. **Minimum SINR Requirement**: 8 dB
+5. **Channel Gain Formula**: Defined as:
+\[
+G_{ij} = \frac{1}{(d_{ij})^{\gamma}} \quad (\gamma = 2.5, d_{ij} \text{ is the distance between transmitter } i \text{ and receiver } j)
+\]
+6. **Noise Variance**: \(N_0 = 1 \times 10^{-8}\) Watts
