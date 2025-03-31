@@ -10,7 +10,7 @@ Non-convex resource allocation problems pose significant challenges in wireless 
 
 ## **🗺️ Overview**
 
-![main.png](main.png)
+![main.png](assets/main.png)
 
 **Figure 1: Overview of the LLM-OptiRA Framework**
 
@@ -95,19 +95,19 @@ programs = [
 
 ### Main Result
 
-![exp1.png](exp1.png)
+![exp1.png](assets/exp1.png)
 
 **Figure 2: Comparison of Execution and Success Rates for Different Schemes using GPT-4 and GPT-3.5 Models**
 
 This figure shows that LLM-OptiRA outperforms baseline methods in execution and success rates on both GPT-4 and GPT-3.5 models, highlighting its effectiveness in solving non-convex problems.
 
-![heatmap.png](heatmap.png)
+![heatmap.png](assets/heatmap.png)
 
 **Figure 3: Impact of Omitting Key Components of the LLM-OptiRA Framework on Success and Execution Rates across GPT4 and GPT-3.5**
 
 This figure reveals that removing components like convexification, ECL, or FDC significantly reduces the success and execution rates, emphasizing their importance in the framework.
 
-![iteration.png](iteration.png)
+![iteration.png](assets/iteration.png)
 
 **Figure 4: Success and Execution Rates for LLM-OptiRA under Different Maximum Iteration Counts for ECL and FDC**
 
