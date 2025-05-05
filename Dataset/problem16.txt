@@ -1,0 +1,14 @@
+### SINR Maximization Problem
+**Problem Description**
+In a multi-user wireless network, the goal is to allocate power to each transmitter such that the minimum SINR across all users is maximized. This optimization problem focuses on enhancing the quality of service for all users while adhering to the maximum power constraints.
+
+### Variable Parameters
+1. **Number of Users**: 4
+2. **Maximum Transmit Power per User**: 25 Watts
+3. **Minimum SINR Requirement**: 15 dB
+4. **Channel Gain Formula**: Given by:
+\[
+G_{ij} = \frac{1}{(d_{ij})^{\gamma}} \quad (\gamma = 3.0, d_{ij} \text{ is the distance between transmitter } i \text{ and receiver } j)
+\]
+5. **Noise Variance**: \(N_0 = 5 \times 10^{-10}\) Watts
+6. **Total Available Power**: 100 Watts

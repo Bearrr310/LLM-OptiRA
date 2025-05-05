@@ -1,0 +1,17 @@
+### **Power Allocation Optimization in 5G OFDMA System**
+### Problem Description:
+In a 5G OFDMA system, we aim to optimize the power allocation among different base stations to maximize the overall data transmission rate. Each base station serves a number of users, with varying channel conditions represented by channel gain values. The power transmitted by each base station must be allocated efficiently to meet the increasing demand for data without exceeding power limits. The signal-to-noise ratio (SNR) of the transmission can be impacted by various factors such as path loss and noise, represented through the gain from the channel estimation process. Thus, the optimization will focus on adjusting the power levels for each user to maximize throughput while ensuring quality of service.
+
+**Objective:** Maximize the overall data rate across all users.
+**Constraints:**
+1. The total transmit power for each base station must not exceed a maximum limit (for example, 2 Watts).
+2. Each user must meet a minimum data rate requirement, set at 0.5 Mbps.
+3. The sum of power allocated to each subcarrier for all users must not exceed the total available power for that base station.
+**Channel Gain Formula:**
+The channel gain can be modeled as \(G_{ij} = \frac{d_{0}}{d_{ij}^n}\), where \(d_{ij}\) is the distance between the base station \(i\) and user \(j\), \(d_{0}\) is a reference distance, and \(n\) is the path loss exponent.
+
+### Variable Parameters:
+- Number of base stations: 4
+- Number of users: 64
+- Minimum data rate requirement for each user: 0.5 Mbps
+- Maximum transmit power per base station: 2 Watts

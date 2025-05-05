@@ -1,0 +1,11 @@
+### **Multi-Agent Joint Sensing and Transmission**
+
+**Problem Description**  
+In a wireless sensor network, each sensor node jointly optimizes energy for sensing and transmission. The sensing accuracy depends logarithmically on energy, and the transmission rate depends logarithmically on power. The overall utility is **a product of sensing quality and rate**, making the objective non-convex.
+
+**Variable Parameters**  
+1. **Number of Nodes**: 5  
+2. **Total Energy Budget per Node**: 1 Joule  
+3. **Energy Split Variable**: \(\theta_i \in [0, 1]\), where \(\theta_i\) is fraction for sensing  
+4. **Channel Gains**: [0.6, 0.8, 0.5, 0.7, 0.9]  
+5. **Noise Power**: \(1e-10\) W  

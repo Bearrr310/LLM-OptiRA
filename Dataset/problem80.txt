@@ -1,0 +1,20 @@
+### **Energy-Efficient Hybrid Beamforming in mmWave MIMO Systems**
+
+### Problem Description:
+
+Millimeter-wave (mmWave) MIMO systems require hybrid beamforming to reduce hardware complexity. The challenge is to optimize digital and analog beamforming weights while minimizing power consumption.
+
+**Objective:** Maximize the spectral efficiency while minimizing power consumption.
+
+**Constraints:**
+
+1. The sum power of all RF chains must not exceed a given power budget.
+2. The beamforming vectors must satisfy unit modulus constraints.
+3. Each user must receive a minimum SINR to ensure reliable communication.
+
+### Variable Parameters:
+
+- Number of users: 10
+- Number of RF chains per base station: 4
+- Maximum power budget per RF chain: 18 dBm
+- Minimum SINR per user: 9 dB

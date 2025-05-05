@@ -1,0 +1,16 @@
+### TDMA System
+**Problem Background**:
+In a TDMA system, users are allocated specific time slots for communication. The objective is to minimize the total transmission time while adhering to each user's latency requirements. Channel conditions affect both latency and transmission success rates.
+**Channel Conditions**:
+The channel gain for user \( i \) in time slot \( t \) is defined as:
+\[
+h_{it} = \frac{P_t}{d_i^n} \cdot \gamma_{it}
+\]
+where \( P_t = 0.2 \) W (transmitted power), \( d_i \) is the distance to user \( i \), \( n = 2 \) (path loss exponent), and \( \gamma_{it} \) varies with time, with a maximum value of 1.
+
+**Specific Parameters**:
+- Number of users: 3
+- Maximum transmit power per user: 0.2 W
+- Latency requirement per user: 100 ms
+- Noise power: 0.01 W
+- Distances to users: user 1: 40 m, user 2: 60 m, user 3: 80 m.

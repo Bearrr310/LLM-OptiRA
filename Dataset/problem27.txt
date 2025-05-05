@@ -1,0 +1,18 @@
+### **Resource Allocation with Quality of Service (QoS) Requirements**
+### Problem Description:
+This optimization problem addresses resource allocation in a 5G OFDMA system with a focus on meeting specific quality of service (QoS) requirements for each user. The optimization seeks to allocate resources efficiently while ensuring that every user receives the minimum required data rate based on their service level agreements. This requires consideration of channel conditions and user demands, balancing resource distribution to maintain user satisfaction.
+
+**Objective:** Maximize user satisfaction while fulfilling QoS requirements.
+**Constraints:**
+1. Each user must meet a minimum data rate requirement of 2 Mbps.
+2. The total power used by each base station cannot exceed 2 Watts.
+3. The system’s total channel capacity must be sufficient to accommodate all user demands.
+
+**Channel Gain Formula:**
+The channel gain can again be evaluated using the previously established gain model to assess resource needs based on user location and distance.
+
+### Variable Parameters:
+- Number of base stations: 4
+- Total number of users: 64
+- Minimum data rate per user: 2 Mbps
+- Maximum transmit power per base station: 2 Watts

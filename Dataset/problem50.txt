@@ -1,0 +1,12 @@
+### ** Power Allocation with Exponential QoS Penalty**
+
+**Problem Description**  
+In a V2V safety-critical application, QoS violations incur exponential penalties in utility. The optimization seeks to allocate power to minimize the total expected penalty, which is modeled as \( \sum_i \exp(-\alpha_i \cdot R_i) \), where \(R_i\) is user i's rate. This objective is **non-convex due to the exponential rate transformation**.
+
+**Variable Parameters**  
+1. **Number of Vehicles**: 4  
+2. **Max Transmit Power per Vehicle**: 8 W  
+3. **\(\alpha\) Parameters**: [2.0, 1.5, 2.2, 1.8]  
+4. **Channel Gains**: [0.5, 0.7, 0.9, 0.6]  
+5. **Bandwidth**: 1 MHz  
+6. **Noise Power**: \(1e-9\) W  

@@ -1,0 +1,69 @@
+Remember your job: 
+1、Following the input and output format, aligning with the length and context.
+
+Example:
+
+1:
+Input:Problem:Optimization Problem:### Problem Statement
+
+**Objective:**
+Optimize resource allocation in a communication network to maximize the total throughput.
+
+### Mathematical Formulation
+
+**Variables:**
+- Let \( x_i \) denote the amount of resource allocated to user \( i \).
+- Let \( h_i \) be the channel condition for user \( i \), which can vary due to factors like distance, environment, etc.
+- Let \( p_i \) be the power allocated to user \( i \).
+- Let \( R_i \) represent the throughput of user \( i \).
+
+**Objective Function:**
+We want to maximize the total throughput across all users:
+\[
+\text{Maximize } Z = \sum_{i=1}^{N} R_i
+\]
+where \( R_i = \log_2(1 + \frac{p_i h_i}{N_0}) \) and \( N_0 \) is the noise power spectral density.
+
+### Optimization Flag:
+[Optimization Flag: 1]
+
+### Constraints:
+1. **Power Constraint:**
+   \[
+   \sum_{i=1}^{N} p_i \leq P_{\text{max}}
+   \]
+   where \( P_{\text{max}} \) is the total available power.
+
+2. **Resource Allocation Constraint:**
+   \[
+   \sum_{i=1}^{N} x_i \leq X_{\text{max}}
+   \]
+   where \( X_{\text{max}} \) is the maximum resource available.
+
+3. **Non-negativity Constraints:**
+   \[
+   x_i \geq 0, \quad p_i \geq 0 \quad \forall i
+   \]
+
+4. **Channel Condition Constraint:**
+   Channel conditions \( h_i \) may have a lower and upper bound based on environmental factors:
+   \[
+   h_{\text{min}} \leq h_i \leq h_{\text{max}}, \quad \forall i
+   \]
+
+### Value Parameters:
+Assume:
+- Number of users: \( N = 10 \)
+- Maximum power: \( P_{\text{max}} = 100 \) Watts
+- Maximum resource: \( X_{\text{max}} = 50 \) units
+- Noise power spectral density: \( N_0 = 0.01 \) Watts/Hz
+
+### Summary of the Formulation:
+We have established the objective function to maximize the throughput based on the log function of signal-to-noise ratio derived from the power and channel conditions while ensuring constraints related to total power and resources are satisfied.
+
+This framework can be applied to various scenarios in communications, including but not limited to reallocating power in wireless networks for cognitive radio applications or optimizing channel usage in multi-user scenarios.
+
+If you have specific parameters or a different context in mind, please share, and I can further tailor the optimization model to fit those needs! ,Variable Values:[1.99939461 1.99987526 2.00011559 2.00025959 2.00035496]
+
+Output:0
+2.

@@ -1,0 +1,20 @@
+### **Handover Optimization in High-Speed Railway Networks**
+
+### Problem Description:
+
+High-speed trains require seamless connectivity while moving at high velocities. Frequent handovers between base stations can cause service interruptions. The challenge is to optimize handover decisions to minimize service disruption and maintain high throughput.
+
+**Objective:** Minimize handover frequency while ensuring consistent connectivity and data rates.
+
+**Constraints:**
+
+1. Handover should only occur when the received signal strength drops below a predefined threshold.
+2. Each base station can serve a limited number of active users simultaneously.
+3. The total network latency must remain below a critical threshold for real-time services.
+
+### Variable Parameters:
+
+- Train speed: 300 km/h
+- Maximum users per base station: 50
+- Minimum received signal strength for handover: -95 dBm
+- Maximum allowable network latency: 10 ms

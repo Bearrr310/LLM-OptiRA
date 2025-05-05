@@ -1,0 +1,19 @@
+### **Cell-Free Massive MIMO Power Allocation**
+
+### **Problem Description:**
+
+In cell-free massive MIMO networks, users are served by multiple access points (APs) without predefined cell boundaries. The goal is to allocate power optimally to enhance performance.
+
+**Objective:** Maximize the sum rate of all users while ensuring fairness.
+
+**Constraints:**
+
+1. The total power allocated to each AP must not exceed its power budget.
+2. Each user must receive a minimum SINR.
+
+**Variable Parameters:**
+
+- Number of APs: 10
+- Number of users: 20
+- Maximum transmit power per AP: 30 dBm
+- Minimum SINR per user: 10 dB

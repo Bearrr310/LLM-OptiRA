@@ -1,0 +1,14 @@
+Summary of Results:
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py output: ['[1,1]', '[1,1]', '[0,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[0,0]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[0,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]', '[1,1]']
+
+Flag counts for each problem:
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 48: 4, Total execute flags: 5
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 49: 5, Total execute flags: 5
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 50: 4, Total execute flags: 5
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 51: 5, Total execute flags: 5
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 52: 5, Total execute flags: 5
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 53: 5, Total execute flags: 5
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py - Total success flags for problem 54: 4, Total execute flags: 4
+
+Success rate and execution rate for each program:
+D:\\SEU\\LLM-OptiRA\\LLM-OptiRA\OptiRA.py's success rate: 0.9142857142857143, execution rate: 0.9714285714285714

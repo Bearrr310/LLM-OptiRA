@@ -1,0 +1,127 @@
+
+\math_formulation
+To construct a complete mathematical formula for an optimization problem based on the input details provided and general knowledge of optimization problems, we can start by defining the objective function and constraints clearly.
+
+### Optimization Problem:
+**Objective Function**: We want to optimize the total throughput (Z) in a communication system represented as:
+\[
+Z = \sum_{i=1}^{N} R_i
+\]
+where:
+- \( R_i \) is the throughput of user \( i \),
+- \( N \) is the total number of users.
+
+The throughput \( R_i \) can be modeled based on the Shannon capacity formula as follows:
+\[
+R_i = B \log_2(1 + \frac{P_i h_i}{N_0 B})
+\]
+where:
+- \( B \) is the bandwidth,
+- \( P_i \) is the transmitted power for user \( i \),
+- \( h_i \) is the channel condition for user \( i \),
+- \( N_0 \) is the noise power spectral density.
+
+### Objective:
+We want to **maximize** the total throughput \( Z \).
+\[
+\text{Objective: Maximize } Z
+\]
+[Optimization Flag: 1]
+
+### Constraints:
+1. **Power Constraint** (total power available should not exceed the maximum power \( P_{max} \)):
+\[
+\sum_{i=1}^{N} P_i \leq P_{max}
+\]
+
+2. **Resource Allocation Constraint** (each user must operate within a certain signal-to-noise ratio):
+\[
+\frac{P_i h_i}{N_0 B} \leq S_i \quad \forall i \in \{1, 2, \ldots, N\}
+\]
+where \( S_i \) is the maximum allowable signal-to-noise ratio for user \( i \).
+
+3. **Non-negativity Constraint**:
+\[
+P_i \geq 0 \quad \forall i \in \{1, 2, \ldots, N\}
+\]
+
+### Formulas for Additional Variables:
+- **Channel Condition \( h_i \)**: 
+In a typical model, the channel condition for user \( i \) can be expressed in terms of distance \( d_i \) and path loss \( \alpha \):
+\[
+h_i = \frac{G_t G_r}{d_i^\alpha}
+\]
+where:
+- \( G_t \) and \( G_r \) are the gains at the transmitter and receiver, respectively,
+- \( d_i \) is the distance between user \( i \) and the base station,
+- \( \alpha \) is the path loss exponent.
+
+- **Total Power Constraint**:
+Define \( P_{max} \) as the maximum power that can be allocated:
+\[
+P_{max} \text{ is a constant representing the total available power.}
+\]
+
+### Final Formulation:
+The complete mathematical formulation of this optimization problem is:
+
+- **Maximize Throughput**:
+\[
+Z = \sum_{i=1}^{N} B \log_2(1 + \frac{P_i h_i}{N_0 B})
+\]
+- **Subject to**:
+1. \(\sum_{i=1}^{N} P_i \leq P_{max}\)
+2. \(\frac{P_i h_i}{N_0 B} \leq S_i \quad \forall i\)
+3. \(P_i \geq 0 \quad \forall i\)
+
+This formulation captures the essence of optimizing the throughput in a communication system with specified constraints.
+
+\generate_code
+
+import numpy as np
+from scipy.optimize import linprog
+
+# Constants
+N = 5  # number of users
+B = 1e6  # bandwidth in Hz
+N0 = 1e-9  # noise power spectral density
+P_max = 10  # maximum total power
+S = np.array([10, 10, 10, 10, 10])  # maximum allowable SNR for each user
+d = np.array([1, 2, 3, 4, 5])  # distances for each user
+G_t = G_r = 1  # gains
+alpha = 2  # path loss exponent
+
+# Channel conditions for each user
+h = G_t * G_r / (d ** alpha)
+
+# Objective function coefficients (to maximize Z)
+def objective(P):
+    return -np.sum(B * np.log2(1 + (P * h) / (N0 * B)))  # Negative for maximization
+
+# Constraints
+A = np.zeros((N + 2, N))
+b = np.zeros(N + 2)
+
+# Power constraint
+A[0, :] = 1  # Coefficients for power sum
+b[0] = P_max
+
+# Resource allocation constraints
+for i in range(N):
+    A[i + 1, i] = -h[i]  # Coefficients for SNR limits
+    b[i + 1] = -S[i] * N0 * B
+
+# Non-negativity constraints
+bounds = [(0, None) for _ in range(N)]
+
+# Solve the optimization problem
+result = linprog(c=np.zeros(N), A_ub=A, b_ub=b, bounds=bounds, method='highs', options={'disp': True})
+
+# Output results
+if result.success:
+    print("Objective function value (Z):", -result.fun)
+    print("Optimized power values (P):", result.x)
+else:
+    print("Optimization failed:", result.message)
+
+

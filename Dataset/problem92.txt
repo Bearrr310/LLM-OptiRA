@@ -1,0 +1,20 @@
+### **UAV Deployment Optimization for Emergency Communication**
+
+### Problem Description:
+
+In disaster scenarios, UAVs provide emergency communication coverage. The goal is to deploy UAVs optimally to maximize network coverage.
+
+**Objective:** Minimize the total number of UAVs while covering all affected areas.
+
+**Constraints:**
+
+1. Each UAV must cover a predefined minimum number of users.
+2. The SINR at each user must be above a threshold.
+3. UAVs must remain within a given altitude range.
+
+### Variable Parameters:
+
+- Number of potential UAV deployment locations: 15
+- Minimum coverage per UAV: 20 users
+- Minimum SINR per user: 8 dB
+- UAV altitude range: 100m - 500m

@@ -1,0 +1,4 @@
+Write a mathematical formula for the optimization problem according to the problem description, solve the optimization problem(maybe non-convex), and finally generate the python code that solves it. If the objective function of the optimization problem is maximization, unify them all into the minimized standard form (plus a negative sign). Make sure that in your code, the first line outputs the objective function and the second line outputs other optimization variables. Don't have code in the idea of solving the problem, and finally generate a complete code.Let's first understand the problem and devise a plan to solve the problem.And please specify whether to maximize or minimize, using the format '[Optimization Flag: 1]' for maximize and '[Optimization Flag: 0]' for minimize.Then, let's carry out the plan and solve the problem step by step.
+Input: $input$
+
+Output:

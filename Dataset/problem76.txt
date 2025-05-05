@@ -1,0 +1,20 @@
+### **UAV-Assisted Relay Network for Rural Coverage**
+
+### Problem Description:
+
+In remote areas, UAVs can act as relays to extend coverage where terrestrial networks are unavailable. The challenge is to optimize UAV deployment and power control.
+
+**Objective:** Maximize coverage area while minimizing UAV energy consumption.
+
+**Constraints:**
+
+1. Each UAV’s altitude must be optimized to balance coverage and interference.
+2. The relay power must be managed to maintain connectivity without excessive interference.
+3. The UAV’s total flight time must not exceed its battery capacity.
+
+### Variable Parameters:
+
+- Number of UAVs: 2
+- UAV altitude range: 100m - 500m
+- Maximum UAV transmit power: 20 dBm
+- Maximum UAV flight time: 2 hours

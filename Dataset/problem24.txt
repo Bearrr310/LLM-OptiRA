@@ -1,0 +1,10 @@
+### Problem Description for Optimization Problem 2: Maximizing Data Transmission Rate
+This optimization problem focuses on maximizing the data transmission rate of a WLAN S1G waveform through a TGah SISO channel. The transmission rate is influenced by both the bandwidth of the channel and the SNR, which directly affects the capacity of the channel.
+
+The optimization must comply with specific constraints. The channel bandwidth is set to 2 MHz, ensuring sufficient capacity for data transmission. Additionally, the power of the transmitted signal must fall within predefined limits to prevent interference and signal degradation. The noise figure of the receiver must be maintained at a minimum of 9 dB to avoid excessive noise impacting the received signal quality. Finally, the mean squared error (MSE) of the signal must remain below 0.01 to ensure that the signal remains intelligible and free of significant distortion.
+
+### Variable Parameters
+- Bandwidth: The channel bandwidth is fixed at 2 MHz.
+- Signal Power: The minimum power for the transmitted signal is set at 0.1 watts, while the maximum is capped at 1 watt.
+- Noise Figure: The receiver's noise figure is fixed at 9 dB.
+- MSE: The mean squared error threshold is set at 0.01.

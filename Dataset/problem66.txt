@@ -1,0 +1,20 @@
+### **Joint UAV Positioning and Power Control for Aerial Base Stations**
+
+### Problem Description:
+
+Unmanned Aerial Vehicles (UAVs) can serve as aerial base stations to provide temporary coverage. The challenge is to optimize UAV positioning and power control to maximize coverage while minimizing energy consumption.
+
+**Objective:** Maximize the number of users covered while minimizing UAV transmit power.
+
+**Constraints:**
+
+1. Each UAV’s transmit power must remain within a predefined budget.
+2. The UAV must maintain an optimal altitude to balance coverage and interference.
+3. Each user must achieve a minimum received power threshold for reliable communication.
+
+### Variable Parameters:
+
+- Number of UAVs: 3
+- Maximum UAV transmit power: 25 dBm
+- Minimum received power per user: -85 dBm
+- UAV altitude range: 100m - 500m

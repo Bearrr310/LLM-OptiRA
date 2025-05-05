@@ -1,0 +1,21 @@
+**Joint User Scheduling and Resource Allocation in Full-Duplex Networks**
+
+### Problem Description:
+
+Full-duplex (FD) communication enables simultaneous transmission and reception, increasing spectrum efficiency. However, self-interference and inter-user interference must be carefully managed through optimal scheduling and resource allocation.
+
+**Objective:** Maximize system spectral efficiency while mitigating self-interference.
+
+**Constraints:**
+
+1. The total self-interference power must remain below a predefined threshold.
+2. The sum of allocated resources per user must not exceed the total system bandwidth.
+3. Each scheduled user must meet a minimum required SINR.
+
+### Variable Parameters:
+
+- Number of users: 12
+- System bandwidth: 100 MHz
+- Maximum self-interference power: -80 dBm
+- Minimum required SINR per user: 14 dB
+- Full-duplex efficiency factor: 0.85 (accounts for practical hardware imperfections)

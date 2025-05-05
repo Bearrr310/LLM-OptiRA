@@ -1,0 +1,21 @@
+### **Energy-Efficient Offloading in Mobile Edge Computing (MEC)**
+
+### Problem Description:
+
+In Mobile Edge Computing, user devices can offload computational tasks to edge servers to save energy and improve processing efficiency. The challenge is to decide which tasks to offload while optimizing energy consumption.
+
+**Objective:** Minimize total energy consumption while ensuring all tasks are completed within a given deadline.
+
+**Constraints:**
+
+1. Each task must be either processed locally or offloaded to an edge server.
+2. The total computing load on each edge server must not exceed its processing capacity.
+3. The total energy consumed must remain within the battery budget of mobile devices.
+
+### Variable Parameters:
+
+- Number of mobile users: 10
+- Number of edge servers: 3
+- Maximum processing capacity per edge server: 50 GFLOPS
+- Maximum energy budget per mobile device: 500 mJ
+- Task completion deadline: 100 ms

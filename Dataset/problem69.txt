@@ -1,0 +1,20 @@
+### **User-Centric Cell-Free Massive MIMO for Next-Gen Networks**
+
+### Problem Description:
+
+Cell-free massive MIMO eliminates traditional cell boundaries, where multiple access points jointly serve users. The challenge is to allocate resources dynamically to optimize throughput while minimizing inter-user interference.
+
+**Objective:** Maximize user-centric throughput by dynamically assigning access points and power.
+
+**Constraints:**
+
+1. Each user must be served by at least three access points for diversity gain.
+2. The sum power across all access points must remain within a system-wide budget.
+3. Each user’s SINR must meet a minimum threshold for acceptable service quality.
+
+### Variable Parameters:
+
+- Number of distributed access points: 20
+- Number of users: 30
+- Maximum total system power: 50 dBm
+- Minimum SINR per user: 10 dB

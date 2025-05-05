@@ -1,0 +1,10 @@
+OFDMA System (Bandwidth and Power Allocation)
+Problem Description:**
+In a multi-user OFDMA system, the goal is to maximize the overall system throughput by jointly optimizing bandwidth and power allocation for multiple users. The total available bandwidth is divided among users, and each user is assigned a transmission power. The channel follows a frequency-selective fading model, with the channel gain determined by factors such as distance and environmental conditions. The objective is to maximize the sum-rate of all users while adhering to system constraints.
+The constraints include total bandwidth limits, power constraints per user, a total power budget, and interference thresholds. Each user is assigned unique portions of the bandwidth, and interference from other users must be limited to ensure reliable communication.
+**Parameters:**
+- **Number of Users**: 6 users.
+- **Bandwidth Allocation**: Each user can be allocated a portion of the total bandwidth, with a maximum of 10 MHz per user. The total system bandwidth is 60 MHz.
+- **Power Allocation**: The maximum transmission power per user is 20 Watts. The total system power budget is 80 Watts.
+- **Channel Gain**: The channel gain is constant and deterministic for each user. For example, user-to-user direct channel gain can be set as \( |h_{ii}|^2 = 0.8 \), while cross-user interference gain can be set as \( |h_{ij}|^2 = 0.1 \) for all \( i \neq j \).
+- **Interference Limit**: Interference between users is limited to a threshold of 5 dB.

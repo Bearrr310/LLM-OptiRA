@@ -1,0 +1,19 @@
+### **Handover Optimization in High-Speed Rail Networks**
+
+### **Problem Description:**
+
+High-speed trains frequently switch between base stations, causing handover failures. The goal is to optimize the handover strategy.
+
+**Objective:** Minimize the number of handovers while ensuring seamless connectivity.
+
+**Constraints:**
+
+1. Each user must be associated with one base station at a time.
+2. The signal strength must not drop below a threshold.
+
+**Variable Parameters:**
+
+- Train speed: 300 km/h
+- Number of base stations along the track: 10
+- Minimum received signal power: -80 dBm
+- Maximum handover delay: 50 ms

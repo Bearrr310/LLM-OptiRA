@@ -1,0 +1,21 @@
+### **Beamforming Optimization in Massive MIMO Systems**
+
+### Problem Description:
+
+Massive MIMO (Multiple Input Multiple Output) employs a large number of antennas to enhance spatial diversity and spectral efficiency. The goal is to design an optimal beamforming strategy that maximizes the sum rate while ensuring fairness among users.
+
+**Objective:** Maximize the total system throughput by optimizing beamforming vectors.
+
+**Constraints:**
+
+1. Each user must achieve a minimum SINR requirement for reliable reception.
+2. The total transmit power across all antennas must not exceed the base station’s power budget.
+3. Beamforming vectors must satisfy unit-norm constraints to maintain transmission quality.
+
+### Variable Parameters:
+
+- Number of antennas at the base station: 64
+- Number of users: 16
+- Maximum base station power: 40 dBm
+- Minimum SINR per user: 12 dB
+- Carrier frequency: 3.5 GHz

@@ -1,0 +1,24 @@
+### **Subcarrier Allocation for Minimizing Bit Error Rate (BER)**
+### Problem Description:
+In a 5G OFDMA system, the goal is to optimize the allocation of subcarriers among users to minimize the overall bit error rate (BER). The system employs multiple subcarriers to transmit data, and it is crucial to allocate these based on the estimated channel conditions. By dynamically adjusting subcarrier assignments in response to channel gains, the system can enhance the reliability of data transmission, thereby improving the user experience.
+
+The optimization focuses on ensuring that users with poorer channel conditions receive sufficient resources to achieve an acceptable level of performance, while also managing the power constraints imposed by each base station.
+
+**Objective:** Minimize the overall BER across all users.
+**Constraints:**
+1. Each user can use a maximum of 8 subcarriers.
+2. The total signal power allocated to all users by each base station must not exceed the maximum power available (for example, 2 Watts).
+3. The channel estimation error for each user must remain below an acceptable threshold (for example, less than 5%).
+4. The total number of subcarriers allocated to all users must equal the total available subcarriers (for instance, 64 subcarriers).
+
+**Channel Gain Formula:**
+Utilize the channel gain model \( G_{ij} = \frac{d_{0}}{d_{ij}^n} \) to evaluate the impact of subcarrier allocation on the signal quality, where \( d_{ij} \) is the distance between the base station \( i \) and user \( j \), \( d_{0} \) is a reference distance, and \( n \) is the path loss exponent.
+
+### Variable Parameters:
+- **Number of base stations:** 4
+- **Total number of users:** 64
+- **Maximum subcarriers per user:** 8
+- **Total available subcarriers:** 64
+- **Maximum transmit power per base station:** 2 Watts
+- **Acceptable channel estimation error:** less than 5%
+- **Acceptable bit error rate (target):** less than 1% per user

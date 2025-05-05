@@ -1,0 +1,21 @@
+### **Adaptive Resource Allocation in Integrated Sensing and Communication (ISAC) Networks**
+
+### Problem Description:
+
+ISAC networks integrate wireless communication and radar sensing to enable joint operation. The challenge is to dynamically allocate spectrum and power between sensing and communication tasks to balance performance.
+
+**Objective:** Maximize communication throughput while maintaining sufficient sensing accuracy.
+
+**Constraints:**
+
+1. The allocated bandwidth for sensing and communication must not exceed the total available spectrum.
+2. The transmit power for sensing must ensure a minimum radar detection probability.
+3. Each communication user must achieve a minimum required SINR.
+
+### Variable Parameters:
+
+- Total available bandwidth: 100 MHz
+- Number of users: 10
+- Minimum SINR for communication: 15 dB
+- Sensing power requirement: -50 dBm for target detection
+- Spectrum division: Flexible between sensing and communication

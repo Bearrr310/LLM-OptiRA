@@ -1,0 +1,21 @@
+### Cognitive Radio Networks
+**Problem Background**:
+Cognitive radio networks allow secondary users to access spectrum resources while ensuring minimal interference to primary users. The objective is to maximize secondary user throughput while respecting constraints imposed by primary users.
+**Channel Conditions**:
+The channel gain for secondary user \( i \) is expressed as:
+\[
+h_{si} = \frac{P_t}{d_{si}^n} \cdot \eta_{si}
+\]
+and the interference to primary user \( j \) is given by:
+\[
+h_{pj} = \frac{P_t}{d_{pj}^n} \cdot \eta_{pj}
+\]
+where \( P_t = 0.15 \) W (transmitted power), \( d_{si} \) and \( d_{pj} \) are the distances to secondary and primary users respectively, \( n = 3 \) (path loss exponent), and both \( \eta_{si} \) and \( \eta_{pj} \) are small-scale fading factors.
+
+**Specific Parameters**:
+- Number of secondary users: 4
+- Number of primary users: 2
+- Maximum transmit power per secondary user: 0.15 W
+- Maximum interference limit to primary users: 0.05 W
+- Noise power: 0.01 W
+- Distances to secondary users: user 1: 50 m, user 2: 70 m, user 3: 90 m, user 4: 110 m.

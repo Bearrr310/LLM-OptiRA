@@ -1,0 +1,21 @@
+**Dynamic Resource Allocation for Vehicle-to-Everything (V2X) Communication**
+
+### Problem Description:
+
+In V2X networks, vehicles need to communicate with infrastructure and other vehicles while maintaining low latency and reliable connectivity. The challenge is to dynamically allocate spectrum and power resources to maximize communication reliability.
+
+**Objective:** Maximize network reliability while ensuring low latency for safety-critical messages.
+
+**Constraints:**
+
+1. The latency for safety messages must not exceed 10 ms.
+2. The power allocated to vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) links must be optimized to minimize interference.
+3. The total allocated bandwidth must not exceed the available spectrum.
+
+### Variable Parameters:
+
+- Number of vehicles: 20
+- Available spectrum: 50 MHz
+- Maximum transmit power per vehicle: 5 Watts
+- Latency constraint for safety messages: 10 ms
+- Path loss model: Urban vehicular channel with Doppler effects

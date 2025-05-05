@@ -1,0 +1,12 @@
+### **Sum Energy Efficiency under Device Hardware Nonlinearity**
+
+**Problem Description**  
+In an IoT uplink scenario, each device transmits to a base station. The hardware of each device is nonlinear, causing its **power consumption to grow quadratically** with transmit power. The objective is to maximize the **sum energy efficiency**, i.e., \(\sum_i \frac{R_i}{a_i P_i^2 + b_i P_i + c_i}\), where \(R_i\) is the rate. The resulting fractional objective with quadratic denominators makes the problem non-convex.
+
+**Variable Parameters**  
+1. **Number of Devices**: 5  
+2. **Max Transmit Power**: 2 W per device  
+3. **Hardware Parameters**: \(a_i = 0.05, b_i = 0.1, c_i = 0.05\)  
+4. **Channel Gain**: [0.4, 0.7, 0.6, 0.5, 0.8]  
+5. **Noise Power**: \(5 \times 10^{-10}\) W  
+6. **Bandwidth**: 500 kHz 

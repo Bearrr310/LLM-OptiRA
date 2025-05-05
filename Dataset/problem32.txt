@@ -1,0 +1,20 @@
+### **Energy-Efficient Scheduling for IoT Networks**
+
+### Problem Description:
+
+IoT devices operate on battery power, making energy-efficient scheduling essential to prolong network lifetime. The goal is to minimize energy consumption while ensuring reliable data transmission.
+
+**Objective:** Minimize total energy consumption while meeting delay constraints.
+
+**Constraints:**
+
+1. Each IoT device must transmit its data within a predefined time window.
+2. The transmission power of each device must be optimized to balance energy use and reliability.
+3. The total energy consumed must remain within the network’s energy budget.
+
+### Variable Parameters:
+
+- Number of IoT devices: 50
+- Maximum transmission power per device: 10 dBm
+- Network energy budget: 1000 mJ
+- Maximum latency per transmission: 50 ms

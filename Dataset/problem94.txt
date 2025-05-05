@@ -1,0 +1,20 @@
+### **Joint Task Offloading and Resource Allocation in Mobile Edge Computing (MEC)**
+
+### Problem Description:
+
+MEC enables task offloading to nearby servers to reduce mobile device computation load. The challenge is to determine optimal offloading decisions.
+
+**Objective:** Minimize the total task execution delay while ensuring energy efficiency.
+
+**Constraints:**
+
+1. Each task must be offloaded to only one MEC server.
+2. The total computational capacity of each server must not be exceeded.
+3. Offloading decisions must minimize overall network energy consumption.
+
+### Variable Parameters:
+
+- Number of mobile devices: 12
+- Number of MEC servers: 3
+- Maximum computational capacity per server: 100 GHz
+- Maximum energy consumption per task: 5 Joules

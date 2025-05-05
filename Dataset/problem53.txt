@@ -1,0 +1,12 @@
+### **Problem 21: Joint Beamforming with SINR Ratio Constraints**
+
+**Problem Description**  
+In a MISO downlink system with multiple users and beamforming at the base station, the aim is to minimize total transmit power while **ensuring that the SINR of each user is at least a specific fraction of the SINR of a reference user**. This SINR ratio constraint introduces a non-convex constraint coupling all beamforming vectors. The reference user is chosen as user 1.
+
+**Variable Parameters**  
+1. **Number of Users**: 3  
+2. **Number of Transmit Antennas**: 6  
+3. **Channel Gain Matrix**: IID Rayleigh fading  
+4. **Noise Power**: \(1 \times 10^{-9}\) Watts  
+5. **Minimum SINR Ratios**: User 2 ≥ 0.8 × User 1, User 3 ≥ 0.7 × User 1  
+6. **Maximum Power Budget**: 30 Watts  

@@ -1,0 +1,12 @@
+**Max-Min Fairness Beamforming in Multi-User MISO Downlink**
+
+**Problem Description**  
+A base station equipped with multiple antennas serves multiple single-antenna users using beamforming in a downlink multiple-input single-output (MISO) system. The aim is to maximize the minimum received SINR among all users (max-min fairness), ensuring uniform quality of service. Each user experiences interference from other beams. The optimization involves selecting complex beamforming vectors under a total transmit power constraint and individual SINR thresholds.
+
+**Variable Parameters**  
+1. **Number of Users**: 4  
+2. **Number of BS Antennas**: 8  
+3. **Channel Model**: IID complex Gaussian channels with variance 1  
+4. **Total Power Budget at BS**: 40 Watts  
+5. **Noise Power at Receivers**: \(5 \times 10^{-10}\) Watts  
+6. **Minimum SINR per User**: 10 dB  

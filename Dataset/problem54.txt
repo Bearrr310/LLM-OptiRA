@@ -1,0 +1,22 @@
+### **Proportional Fairness in Uplink Power Allocation**
+
+**Problem Description**  
+In a multi-user uplink scenario, each user transmits to a common base station over orthogonal channels. The goal is to maximize proportional fairness among users by maximizing the **sum of logarithms** of achievable rates. Each user's achievable rate is a logarithmic function of SINR, which is itself a non-convex function of transmit power. Power budget per user and minimum throughput constraints must be met.
+
+**Variable Parameters**  
+1. **Number of Users**: 4  
+2. **Bandwidth per User**: 1 MHz  
+3. **Channel Gain per User**: [0.5, 0.8, 0.6, 0.9]  
+4. **Noise Power**: \(1 \times 10^{-10}\) Watts  
+5. **Max Power per User**: 10 Watts  
+6. **Minimum Rate per User**: 0.5 Mbps  
+7. **Objective Function**: \(\sum_{i=1}^4 \log_2(R_i)\)
+
+
+
+
+
+
+
+
+

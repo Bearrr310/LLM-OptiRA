@@ -1,0 +1,20 @@
+### **Fair Resource Allocation in Wireless Mesh Networks**
+
+### Problem Description:
+
+Wireless mesh networks (WMNs) rely on multiple nodes for decentralized communication. The challenge is to allocate bandwidth fairly among users to maximize network performance while preventing congestion.
+
+**Objective:** Maximize network-wide throughput while ensuring fairness in bandwidth allocation.
+
+**Constraints:**
+
+1. The sum of allocated bandwidth across all users must not exceed the total available bandwidth.
+2. Each user must receive a minimum guaranteed bandwidth.
+3. The signal interference across adjacent links must remain below a threshold.
+
+### Variable Parameters:
+
+- Number of mesh nodes: 10
+- Total available bandwidth: 50 MHz
+- Minimum guaranteed bandwidth per user: 1 Mbps
+- Maximum interference level: -95 dBm

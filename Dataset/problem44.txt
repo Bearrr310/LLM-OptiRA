@@ -1,0 +1,12 @@
+### **Federated Learning over Wireless with Coupled Constraints**
+
+**Problem Description**  
+Multiple devices perform federated learning and upload local gradients to a parameter server. Upload rate depends on wireless channel, while local accuracy depends on local computation effort. The goal is to **maximize convergence rate**, which is a non-convex function of both transmission rate and computation time. Constraints include local energy, computation power, and communication capacity.
+
+**Variable Parameters**  
+1. **Number of Devices**: 4  
+2. **Data Size per Round**: 2 MB  
+3. **Max Energy per Device**: 0.8 J  
+4. **Bandwidth per Device**: 1 MHz  
+5. **Channel Gains**: [0.5, 0.6, 0.7, 0.8]  
+6. **Local Accuracy Function**: \(A_i = 1 - e^{-t_i}\)  

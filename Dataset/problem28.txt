@@ -1,0 +1,17 @@
+### **Multi-path Channel Estimation for Efficient Resource Allocation**
+### Problem Description:
+In this problem, the focus is on optimizing channel estimation methods to improve resource allocation efficiency in a 5G system characterized by multipath propagation. Efficient channel estimation is critical to reducing performance losses associated with multipath effects. By accurately estimating the channel characteristics, the system can adjust resource allocation strategies to maximize transmission reliability and user satisfaction.
+
+**Objective:** Optimize channel estimation for improved resource allocation.
+**Constraints:**
+1. The estimated multipath delay and amplitude errors must remain below 5%.
+2. The resource allocation must ensure fairness among users, providing each a minimum allocation.
+3. The signal interference must be maintained below a defined threshold to ensure quality.
+**Channel Gain Formula:**
+The channel gain in the context of multipath can be modeled similarly to previous formulas, accounting for the impact of multiple paths on signal quality.
+
+### Variable Parameters:
+- Number of base stations: 4
+- Total number of users: 64
+- Acceptable estimation error for multipath parameters: less than 5%
+- Maximum transmit power per base station: 2 Watts

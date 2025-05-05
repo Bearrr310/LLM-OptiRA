@@ -1,0 +1,20 @@
+### Problem Description:
+
+In a non-orthogonal multiple access (NOMA) system, the objective is to allocate power and subcarriers among users to maximize the total system throughput while ensuring fairness in resource distribution. NOMA enables multiple users to share the same subcarrier with different power levels, and power allocation must adhere to the principle that users with stronger channel conditions receive lower power to facilitate successive interference cancellation (SIC). The optimization problem must consider power budget constraints, minimum rate guarantees, and interference management.
+
+**Objective:** Maximize the sum rate while ensuring fairness.
+
+**Constraints:**
+
+1. The power allocated to each user must not exceed the total available power.
+2. Users with better channel conditions must receive lower power to enable SIC.
+3. Each user must meet a minimum data rate requirement.
+
+### Variable Parameters:
+
+- Number of users: 10
+- Number of subcarriers: 20
+- Maximum transmit power per base station: 40 Watts
+- Minimum required data rate per user: 2 Mbps
+- Channel model: Rayleigh fading with path loss exponent of 3.5
+- Noise power spectral density:  10^{-10}Watts/Hz

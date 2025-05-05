@@ -1,0 +1,10 @@
+### Problem Description for Optimization Problem 1: Minimizing Signal Distortion
+In this optimization problem, the objective is to minimize the distortion of a WLAN S1G waveform after transmission through a TGah SISO channel, characterized by its inherent noise and path loss. The signal distortion is evaluated using the mean squared error between the received signal and the transmitted signal.
+
+To achieve this objective, the optimization must adhere to several constraints. First, the power of the received signal must exceed a specified minimum threshold to ensure adequate signal quality. Additionally, the signal-to-noise ratio (SNR) should be maintained at a minimum of 10 dB to mitigate the effects of noise in the communication channel. The transmission delay is constrained to be no more than 5 milliseconds, reflecting the system's requirement for timely data delivery. Lastly, the noise variance introduced by the receiver must not exceed 0.5 to maintain acceptable performance levels.
+
+### Variable Parameters
+- Signal Power: The minimum signal power must be set at 0.1 watts.
+- SNR: A minimum SNR of 10 dB is required.
+- Delay: The maximum allowable delay for signal transmission is fixed at 5 milliseconds.
+- Noise Variance: The maximum noise variance for the receiver is set at 0.5.

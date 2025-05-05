@@ -1,0 +1,17 @@
+###OFDMA System
+**Problem Background**:
+In an OFDMA system, multiple users share subcarriers. The objective is to allocate these subcarriers to maximize the overall achievable data rates while ensuring that each user meets their minimum rate requirements. The channel conditions significantly influence the achievable rates for each user.
+**Channel Conditions**:
+Each user's channel gain on subcarrier \( k \) is given by:
+\[
+h_{ik} = \frac{P_t}{d_k^n} \cdot \beta_{ik}
+\]
+where \( P_t = 0.1 \) W (transmitted power), \( d_k \) is the distance to the user on subcarrier \( k \), \( n = 3 \) (path loss exponent), and \( \beta_{ik} \) is a small-scale fading factor assumed to be 1.
+
+**Specific Parameters**:
+- Number of users: 4
+- Number of subcarriers: 10
+- Minimum data rate requirement per user: 1 Mbps
+- Maximum transmit power per user: 0.1 W
+- Noise power: 0.01 W
+- Distances to users: user 1: 30 m, user 2: 50 m, user 3: 70 m, user 4: 90 m.

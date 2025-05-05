@@ -1,0 +1,22 @@
+### **Load Balancing and Power Optimization in Heterogeneous Networks (HetNets)**
+
+### Problem Description:
+
+Heterogeneous networks consist of macro and small cells working together to enhance coverage and capacity. The challenge is to optimize user association and power allocation to balance the load and improve spectral efficiency.
+
+**Objective:** Maximize network spectral efficiency while ensuring balanced load across macro and small cells.
+
+**Constraints:**
+
+1. Each small cell must not exceed its maximum power budget.
+2. The load on each base station should be balanced to avoid congestion.
+3. Users should be assigned to base stations based on their SINR to ensure efficient resource utilization.
+
+### Variable Parameters:
+
+- Number of macro base stations: 2
+- Number of small cells: 4
+- Number of users: 20
+- Macro base station max power: 40 dBm
+- Small cell max power: 25 dBm
+- Minimum SINR for user association: 12 dB

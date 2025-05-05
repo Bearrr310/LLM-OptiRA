@@ -1,0 +1,17 @@
+### Problem Description
+
+In a multi-user communication system, the objective is to maximize the overall network capacity by jointly optimizing power and spectrum allocation among users. Each user transmits information over a designated subcarrier, and the capacity of their transmission is influenced by both the power they allocate and the channel conditions. The channel between the user and the base station is characterized by a fixed gain parameter based on user location and interference from other users.
+
+The optimization problem consists of maximizing the sum of the logarithm of the signal-to-interference-plus-noise ratio (SINR) for each user. The SINR is determined by the power allocated to the user and the fixed interference from other users sharing the same subcarriers. Constraints include the maximum transmit power for each user, the condition that each user can only occupy one subcarrier, limitations on the bandwidth per subcarrier, and a total power budget that must not be exceeded across all users.
+
+### Variable Parameters
+
+1. **Number of Users**: The system supports **20 users**, providing a balance between capacity and complexity.
+2. **Maximum Power per User**: Each user has a maximum transmit power limit set at **5 watts**, based on regulatory standards and hardware capabilities.
+3. **Total Power Budget**: The total power available for the network is **200 watts**, ensuring efficient energy use across all users.
+4. **Subcarriers**: There are **10 available subcarriers** for transmission, each with a bandwidth of **100 kHz**, conforming to typical communication protocols.
+5. **Channel Gain**: The channel gain for each user is fixed:
+   - **3 dB** for users within **100 meters** of the base station.
+   - **0 dB** for users between **100 meters and 300 meters** from the base station.
+   - **-3 dB** for users beyond **300 meters**.
+6. **Interference Levels**: Interference from other users sharing subcarriers is estimated to be a constant value of **0.5 watts** per user.

@@ -1,0 +1,21 @@
+### **UAV-Assisted 5G Network for Disaster Recovery**
+
+### Problem Description:
+
+After a natural disaster, terrestrial base stations may be damaged. UAVs can be deployed as temporary base stations to restore connectivity. The challenge is to optimize UAV deployment and power control.
+
+**Objective:** Maximize the number of covered users while minimizing UAV power consumption.
+
+**Constraints:**
+
+1. Each UAV must maintain a certain altitude to ensure signal coverage.
+2. The total power consumed by UAVs must not exceed their energy budget.
+3. Each user must receive a minimum SINR for a stable connection.
+
+### Variable Parameters:
+
+- Number of UAVs: 3
+- Maximum UAV altitude: 300m
+- Maximum UAV transmit power: 25 dBm
+- Minimum SINR per user: 8 dB
+- Number of ground users: 50

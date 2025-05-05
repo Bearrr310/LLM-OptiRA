@@ -1,0 +1,15 @@
+### **Coverage Maximization in Heterogeneous Networks**
+
+**Problem Description**
+
+In a heterogeneous network consisting of macro and small cells, the objective is to maximize the total coverage area by optimally turning on/off small cells and allocating power to each active cell. The coverage is defined as the total area where the received SINR exceeds a threshold. The optimization is subject to power budget constraints, backhaul capacity limits, and a maximum number of simultaneously active small cells. Users are uniformly distributed across the coverage area.
+
+**Variable Parameters**
+
+1. **Number of Small Cells**: 6
+2. **Number of Macro Cells**: 1
+3. **Maximum Power per Small Cell**: 10 Watts
+4. **Maximum Power for Macro Cell**: 40 Watts
+5. **SINR Threshold for Coverage**: 5 dB
+6. **Maximum Active Small Cells**: 4
+7. **Backhaul Capacity per Small Cell**: 20 Mbps

@@ -1,0 +1,116 @@
+Remember your job: 
+1、Following the input and output format, aligning with the length and context.
+
+Example:
+
+1:
+Input: 
+### Identification of Non-Convex Parts
+
+In the formulated optimization problem, the non-convex components primarily arise from the logarithmic and rational expressions involved in the SINR calculations. Specifically:
+
+1. **Logarithmic Function**: The term \( \log_2(1 + \text{SINR}_i) \) is concave.
+2. **SINR Expression**: The SINR expression involves a ratio of polynomials, which can lead to non-convexities, especially when the power variables \( P_i \) interact.
+
+### Convexification Strategy
+
+To make the problem convex, we can utilize techniques such as:
+- **Change of Variables**: Introduce auxiliary variables.
+- **Convex Over-approximation**: Use inequalities to approximate the non-convex terms.
+
+### Proposed Algorithm
+
+A suitable approach would be to use **Sequential Convex Programming (SCP)** or **Mixed-Integer Nonlinear Programming (MINLP)** methods. For a more direct method, we can linearize the logarithmic term and use **convex relaxation**.
+
+### Derivation for Convexity
+
+#### 1. **Introduce Auxiliary Variables**
+Let:
+\[
+y_i = P_i \cdot G_i
+\]
+Then, the SINR becomes:
+\[
+\text{SINR}_i = \frac{y_i}{\sum_{j \neq i} y_j + N}
+\]
+
+#### 2. **Logarithmic Transformation**
+Using a transformation for convexity:
+\[
+\log_2(1 + \text{SINR}_i) \approx \log_2(1 + z_i)
+\]
+where \( z_i = \frac{y_i}{\epsilon + \sum_{j \neq i} y_j} \) for a small \( \epsilon > 0 \).
+
+### Optimization Problem After Convexification
+
+**Objective Function**:
+Maximize:
+\[
+T = \sum_{i=1}^{5} \log_2\left(1 + \frac{y_i}{\sum_{j \neq i} y_j + N}\right)
+\]
+
+**Subject to**:
+1. \( \frac{y_i}{\sum_{j \neq i} y_j + N} \geq 10^{(5/10)} \)
+2. \( \sum_{i=1}^{5} P_i \leq 10 \)
+3. \( P_i \leq 5 \)
+4. \( y_i = P_i \cdot G_i \)
+
+### Summary of the Convexified Problem
+The convexified optimization problem can be summarized as follows:
+
+**Maximize**:
+\[
+T = \sum_{i=1}^{5} \log_2\left(1 + \frac{y_i}{\sum_{j \neq i} y_j + N}\right)
+\]
+
+**Subject to**:
+1. \( y_i \geq 10^{(5/10)}(\sum_{j \neq i} y_j + N) \)
+2. \( \sum_{i=1}^{5} P_i \leq 10 \)
+3. \( P_i \leq 5 \)
+4. \( y_i = P_i \cdot G_i \)
+
+This reformulation addresses the non-convex aspects, making it more suitable for direct solution using convex optimization solvers.
+Output:
+import numpy as np
+from scipy.optimize import minimize
+
+# Parameters
+K = 200
+d = np.array([10, 15, 20, 25, 30])  # distances in meters
+n = 2
+N = 0.001  # noise power in W
+R_min_dB = 5  # minimum SINR requirement in dB
+P_total = 10  # total power budget in W
+P_max = 5  # maximum transmit power per user in W
+
+# Channel gains
+G = K / (d ** n)
+
+# Objective function
+def objective(y):
+    return -np.sum(np.log2(1 + y / (np.sum(y) - y + N)))  # minimize the negative for maximization
+
+# Constraints
+def constraint_sinr(y):
+    return np.array([(y[i] / (np.sum(y) - y[i] + N)) - 10 ** (R_min_dB / 10) for i in range(5)])
+
+def constraint_power(y):
+    return P_total - np.sum(y / G)  # total power constraint
+
+# Initial guess
+y0 = np.ones(5)
+
+# Bounds
+bounds = [(0, P_max)] * 5  # each y_i must be between 0 and P_max
+
+# Constraints dictionary
+constr = [{'type': 'ineq', 'fun': constraint_sinr},
+          {'type': 'ineq', 'fun': constraint_power}]
+
+# Solve the optimization problem
+result = minimize(objective, y0, bounds=bounds, constraints=constr)
+
+# Output results
+print("Objective Function Value:", -result.fun)
+print("Optimized Power Allocations (P_i):", result.x * G)  # Convert y to P_i
+

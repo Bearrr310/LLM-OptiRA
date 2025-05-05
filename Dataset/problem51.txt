@@ -1,0 +1,15 @@
+### **Energy-Aware Offloading in Edge-Assisted Cellular Network**
+
+**Problem Description**
+
+In a mobile edge computing (MEC) environment, users can either compute tasks locally or offload them to a nearby edge server. The goal is to minimize the total energy consumption of all mobile devices by jointly deciding which tasks to offload and how much power to allocate to local computation and transmission. Constraints include latency requirements, limited edge server capacity, and per-user energy budgets.
+
+**Variable Parameters**
+
+1. **Number of Users**: 5
+2. **Task Size per User**: 500 KB
+3. **Latency Deadline**: 50 ms
+4. **Local CPU Frequency Limit**: 2 GHz
+5. **Transmission Power Limit per User**: 1.5 Watts
+6. **Edge Server Computation Limit**: 10 GHz
+7. **Energy Budget per User**: 0.5 Joules

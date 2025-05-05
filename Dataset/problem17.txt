@@ -1,0 +1,14 @@
+### Maximizing Channel Capacity Problem
+**Problem Description**
+The goal of this optimization problem is to maximize the total channel capacity of the wireless network by appropriately allocating bandwidth and power to users. It focuses on ensuring efficient use of the channel while adhering to power constraints.
+
+### Variable Parameters
+1. **Number of Users**: 6
+2. **Maximum Transmit Power per User**: 20 Watts
+3. **Total Bandwidth Available**: 10 MHz
+4. **Channel Gain Formula**: Modelled by:
+\[
+G_{ij} = \frac{1}{(d_{ij})^{\gamma}} \quad (\gamma = 2.0, d_{ij} \text{ is the distance between transmitter } i \text{ and receiver } j)
+\]
+5. **Noise Variance**: \(N_0 = 2 \times 10^{-10}\) Watts
+6. **Minimum Capacity Requirement**: 2 Mbps per user

@@ -1,0 +1,22 @@
+**Task Offloading Optimization in Mobile Edge Computing**
+
+### Problem Description:
+
+In a mobile edge computing (MEC) system, user devices can offload computation-intensive tasks to edge servers. The goal is to optimize the task offloading decision and resource allocation to minimize energy consumption while meeting task deadline constraints. The problem must consider user device limitations and edge server capacities.
+
+**Objective:** Minimize total energy consumption while ensuring task completion before deadlines.
+
+**Constraints:**
+
+1. Each task must either be processed locally or offloaded to an edge server.
+2. The total computational load on each server must not exceed its capacity.
+3. Task execution must be completed before its deadline.
+
+### Variable Parameters:
+
+- Number of edge servers: 4
+- Number of mobile users: 50
+- Maximum processing capacity per edge server: 20 GHz
+- Maximum allowable latency per task: 100 ms
+- Device battery capacity: 4000 mAh
+- Task data size range: 10 MB to 300 MB

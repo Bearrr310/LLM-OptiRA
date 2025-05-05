@@ -1,0 +1,241 @@
+
+\math_formulation
+To construct a complete mathematical formula for an optimization problem, let’s assume we are dealing with a general scenario in a communication system where we aim to optimize the transmission rates given certain channel conditions. Below is a formulated optimization problem, including the objective function and constraints.
+
+### Problem Definition
+Let us denote:
+- \( R \): The transmission rate (in bits per second)
+- \( P \): The total power allocated for transmission (in watts)
+- \( h \): The channel condition (for instance, the channel gain or channel state information)
+- \( N_0 \): The noise power spectral density (in watts per hertz)
+- \( B \): The bandwidth of the channel (in hertz)
+- \( C \): The maximum channel capacity we aim to achieve
+
+### Objective Function
+Maximize the transmission rate \( R \):
+
+\[
+R = B \log_2\left(1 + \frac{P \cdot h}{N_0 B}\right)
+\]
+
+### Constraints
+1. Power constraint:
+   \[
+   P \leq P_{max}
+   \]
+   where \( P_{max} \) is the maximum power limit.
+
+2. Bandwidth constraint:
+   \[
+   B \leq B_{max}
+   \]
+   where \( B_{max} \) is the maximum bandwidth available.
+
+3. Channel condition constraints:
+   \[
+   0 < h \leq h_{max}
+   \]
+   where \( h_{max} \) is the maximum channel gain or condition.
+
+4. Non-negativity constraints:
+   \[
+   R \geq 0
+   \]
+   \[
+   P \geq 0
+   \]
+   \[
+   B \geq 0
+   \]
+
+### Formulation Summary
+Putting everything together, we have the following optimization problem:
+
+\[
+\text{Maximize } R = B \log_2\left(1 + \frac{P \cdot h}{N_0 B}\right) \quad [Optimization Flag: 1]
+\]
+
+Subject to:
+1. \( P \leq P_{max} \)
+2. \( B \leq B_{max} \)
+3. \( 0 < h \leq h_{max} \)
+4. \( R \geq 0 \)
+5. \( P \geq 0 \)
+6. \( B \geq 0 \)
+
+### Additional Variable Formulas
+The channel condition \( h \) can be defined based on different models depending on the scenario. For example, for a Rayleigh fading channel:
+
+\[
+h = \sqrt{X^2 + Y^2} \quad \text{where } X, Y \sim N(0, 1)
+\]
+
+This represents the magnitude of the complex signal affected by random variations in amplitude due to multipath propagation.
+
+This formulation encompasses the objective function along with the appropriate constraints, clearly specifying whether to maximize or minimize, in this case maximizing the transmission rate under given conditions.
+
+\ transfer_convex
+### Identification of Non-Convex Parts
+
+In the formulated optimization problem, the non-convex components are identified as follows:
+
+1. **Logarithmic Objective Function**: The term \( \log_2(1 + \frac{P \cdot h}{N_0 B}) \) is concave, which contributes to a non-convex nature when maximizing the transmission rate \( R \).
+
+2. **Inequality Constraints**:
+   - The constraint \( 0 < h \leq h_{\text{max}} \) itself can lead to non-convexity due to the strict inequality lower bound on \( h \).
+   - The power constraint \( P \leq P_{\text{max}} \) is linear and poses no non-convexity.
+
+3. **Non-negativity Constraints**: Although these are standard constraints, they typically do not introduce non-convexity unless interacting with other non-convex parts of the problem.
+
+### Appropriate Convexification Algorithm
+
+To convert the non-convex components into a convex form, we can utilize the **Sequential Convex Programming (SCP)** method combined with **convex relaxation techniques**. This method enables iterative refinement, gradually approximating the original objective and constraints with convex forms suitable for common convex optimization solvers.
+
+### Derivation for Convexification
+
+1. **Logarithmic Reformulation**:
+   To handle the logarithm in the objective function, we can introduce a change of variables. Let:
+
+   \[
+   z = P \cdot h
+   \]
+
+   We redefine \( R \) as:
+
+   \[
+   R = B \log_2(1 + \frac{z}{N_0 B})
+   \]
+
+   This transforms the problem into one of maximizing \( z \) under the new conditions while keeping \( B \) constant.
+
+2. **Channel Condition Constraints**:
+   For the constraint involving \( h \), we can express it in a convex way by using the relationship between \( z \) and \( h \):
+
+   - Given \( z = P \cdot h \), where \( h \) is a function of random variables, we can assert:
+
+   \[
+   0 < h = \frac{z}{P} \leq h_{\text{max}} \implies 0 < z \leq P \cdot h_{\text{max}}
+   \]
+
+3. **Non-negativity Constraints**: The non-negativity constraints for \( P \), \( B \), and \( R \) remain unchanged but are always inherently satisfied by proper selection of \( z \).
+
+### Reformulated Convex Optimization Problem
+
+Translating these changes into a convex optimization problem, we have:
+
+#### Objective Function
+
+Maximize:
+
+\[
+R = B \log_2\left(1 + \frac{z}{N_0 B}\right)
+\]
+
+#### Constraints
+
+1. **Power Constraint**:
+\[
+P \leq P_{\text{max}}
+\]
+
+2. **Bandwidth Constraint**:
+\[
+B \leq B_{\text{max}}
+\]
+
+3. **Channel Condition Constraints**:
+\[
+0 < z \leq P \cdot h_{\text{max}}
+\]
+
+4. **Non-negativity Constraints**:
+\[
+R \geq 0
+\]
+\[
+P \geq 0
+\]
+\[
+B \geq 0
+\]
+
+### Supplementary Variable Formulas
+
+- **Channel Condition**:
+
+The channel condition \( h \) can be represented as follows for a Rayleigh fading channel:
+
+\[
+h = \sqrt{X^2 + Y^2}, \quad \text{where } X, Y \sim N(0, 1)
+\]
+
+- **Derived Variables**:
+     - Define \( z = P \cdot h \) such that \( z \geq 0 \).
+     
+This reformulated optimization problem ensures convexity, allowing for application of standard convex optimization solvers, facilitating efficient computation and optimization of transmission rates given the constraints of the communication system.
+
+\generate_code
+
+import numpy as np
+from scipy.optimize import minimize
+
+# Parameters
+N0 = 1e-9  # noise power in W
+B_max = 10  # max bandwidth in MHz
+P_max = 5  # max transmit power in W
+h_max = 10  # maximum channel gain
+B = 1  # bandwidth in MHz (initial guess)
+P = 1  # transmit power in W (initial guess)
+
+# Channel condition
+X = np.random.normal(0, 1)
+Y = np.random.normal(0, 1)
+h = np.sqrt(X**2 + Y**2)
+
+# Change of variable
+def compute_z(P, h):
+    return P * h
+
+# Objective function
+def objective(vars):
+    P, B = vars
+    z = compute_z(P, h)
+    return -B * np.log2(1 + z / (N0 * B))  # minimize negative for maximization
+
+# Constraints
+def constraint_power(vars):
+    P, B = vars
+    return P_max - P  # P must be <= P_max
+
+def constraint_bandwidth(vars):
+    P, B = vars
+    return B_max - B  # B must be <= B_max
+
+def constraint_channel(vars):
+    P, B = vars
+    z = compute_z(P, h)
+    return np.array([z, P * h_max - z])  # 0 < z <= P * h_max
+
+# Initial guess
+initial_guess = [1, 1]
+
+# Constraints dictionary
+constraints = [{'type': 'ineq', 'fun': constraint_power},
+               {'type': 'ineq', 'fun': constraint_bandwidth},
+               {'type': 'ineq', 'fun': constraint_channel}]
+
+# Solve the optimization problem
+result = minimize(objective, initial_guess, constraints=constraints)
+
+# Output results
+P_opt, B_opt = result.x
+z_opt = compute_z(P_opt, h)
+R_opt = -result.fun  # Maximize, so negate back
+
+print("Objective Function Value (R):", R_opt)
+print("Optimized Power (P):", P_opt)
+print("Optimized Bandwidth (B):", B_opt)
+print("Channel Gain (h):", h)
+print("Derived z:", z_opt)
+
+

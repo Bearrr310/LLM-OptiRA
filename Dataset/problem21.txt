@@ -1,0 +1,21 @@
+### **Latency-Constrained Resource Allocation in URLLC Systems**
+
+### Problem Description:
+
+Ultra-Reliable Low-Latency Communication (URLLC) is essential for applications like autonomous driving and industrial automation. The challenge is to allocate resources to minimize latency while ensuring reliability.
+
+**Objective:** Minimize end-to-end latency while guaranteeing a target packet error rate.
+
+**Constraints:**
+
+1. The allocated bandwidth must be sufficient to meet latency requirements.
+2. Each user must achieve a packet error rate below the reliability threshold.
+3. The total system bandwidth must not exceed the available spectrum.
+
+### Variable Parameters:
+
+- Number of URLLC users: 10
+- Total available bandwidth: 20 MHz
+- Maximum latency per user: 1 ms
+- Packet error rate threshold:10^{-5}
+- Minimum data rate per URLLC user: 2 Mbps

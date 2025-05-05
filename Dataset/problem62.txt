@@ -1,0 +1,20 @@
+### **Energy-Efficient Resource Allocation in IoT Networks**
+
+### Problem Description:
+
+In large-scale Internet of Things (IoT) networks, devices operate on limited battery power, making energy-efficient communication crucial. The goal is to optimize power control and time allocation to extend network lifetime while maintaining reliable communication.
+
+**Objective:** Minimize total energy consumption while ensuring sufficient data transmission for all IoT devices.
+
+**Constraints:**
+
+1. Each IoT device must receive enough time slots to complete data transmission.
+2. The total transmission power across all IoT devices must remain within an energy budget.
+3. The minimum data rate for critical IoT applications must be met.
+
+### Variable Parameters:
+
+- Number of IoT devices: 100
+- Maximum transmission power per device: 10 dBm
+- Minimum data rate per device: 100 kbps
+- Total energy budget: 500 mJ

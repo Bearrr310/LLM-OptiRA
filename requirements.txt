@@ -1,0 +1,5 @@
+conda create -n optira python=3.11
+conda activate optira
+pip install requests
+pip install tenacity
+pip install openai==0.28

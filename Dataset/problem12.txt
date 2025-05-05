@@ -1,0 +1,17 @@
+### 5G Resource Block Allocation
+**Problem Background**:
+In 5G networks, efficient resource block allocation is essential for maximizing user satisfaction. The optimization problem involves effectively allocating resource blocks while managing interference and meeting quality of service requirements.
+
+**Channel Conditions**:
+The channel gain for user \( i \) on resource block \( k \) is defined as:
+\[
+h_{ik} = \frac{P_t}{d_k^n} \cdot \delta_{ik}
+\]
+where \( P_t = 0.1 \) W (transmitted power), \( d_k \) is the distance to user \( i \) on resource block \( k \), \( n = 2 \) (path loss exponent), and \( \delta_{ik} \) is a small-scale fading factor with a maximum value of 1.
+**Specific Parameters**:
+- Number of users: 6
+- Number of resource blocks: 20
+- Minimum data rate requirement per user: 2 Mbps
+- Maximum transmit power per user: 0.1 W
+- Noise power: 0.01 W
+- Distances to users: user 1: 30 m, user 2: 50 m, user 3: 70 m, user 4: 90 m, user 5: 110 m, user 6: 130 m.

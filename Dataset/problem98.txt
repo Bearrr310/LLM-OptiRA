@@ -1,0 +1,19 @@
+### **UAV-Assisted IoT Network Optimization**
+
+### **Problem Description:**
+
+UAVs can be deployed to assist IoT devices in remote areas by acting as relays. The goal is to optimize UAV placement.
+
+**Objective:** Minimize the total transmission delay while ensuring all IoT devices are connected.
+
+**Constraints:**
+
+1. Each UAV must remain within a specific altitude range.
+2. The total number of UAVs must be minimized.
+
+**Variable Parameters:**
+
+- Number of IoT devices: 50
+- Number of UAVs: 5
+- UAV altitude range: 100m - 500m
+- Maximum transmission delay: 10 ms

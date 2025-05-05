@@ -1,0 +1,13 @@
+### **Interference–Distance Coupled Scheduling**
+
+**Problem Description**  
+In a D2D network underlaying a cellular network, devices form direct links if within a fixed distance. The objective is to maximize the total number of D2D links scheduled simultaneously, subject to the constraint that **no two active D2D pairs interfere beyond a limit**, and that their **Euclidean distance is within a threshold**. The interference depends nonlinearly on both transmit power and distance (e.g., interference ∝ \(P / d^\alpha\)). This results in **distance-power product constraints**.
+
+**Variable Parameters**  
+1. **Number of Candidate D2D Pairs**: 10  
+2. **Max Communication Distance per Pair**: 100 meters  
+3. **Pathloss Exponent**: 3.5  
+4. **Max Interference Threshold per Pair**: \(1 \times 10^{-8}\) Watts  
+5. **Transmit Power Range per Pair**: [0.1, 2.0] Watts  
+6. **Binary Scheduling Variable**: 1 if active, 0 if not  
+7. **Objective**: Maximize number of scheduled D2D links  

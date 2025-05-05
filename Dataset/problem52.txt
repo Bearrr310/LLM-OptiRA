@@ -1,0 +1,15 @@
+### **Fair Spectrum Sharing in Cognitive Radio Networks**
+
+**Problem Description**
+
+In a cognitive radio system, secondary users (SUs) access a licensed spectrum band without interfering with primary users (PUs). The objective is to maximize the sum throughput of all SUs while ensuring that the total interference caused to each PU remains below a predefined threshold. The optimization involves power control for each SU and channel selection decisions. Fairness among SUs is ensured via proportional rate constraints.
+
+**Variable Parameters**
+
+1. **Number of Secondary Users**: 4
+2. **Number of Primary Users**: 2
+3. **Total Interference Threshold per PU**: 0.1 Watts
+4. **Channel Availability**: 6 licensed channels
+5. **Max Transmit Power per SU**: 5 Watts
+6. **Channel Gain (SU to PU)**: Random uniform [0.1, 0.3]
+7. **Minimum Throughput per SU**: 1 Mbps

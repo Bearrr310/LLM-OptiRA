@@ -1,0 +1,4 @@
+Based on this optimization problem, construct a complete mathematical formula, including the objective function and constraints. Please also provide formulas for some of the other variables mentioned in the formula, such as channel condition h and the values corresponding to these variables.And please specify whether to maximize or minimize, using the format '[Optimization Flag: 1]' for maximize and '[Optimization Flag: 0]' for minimize.
+Input: $input$
+
+Output:

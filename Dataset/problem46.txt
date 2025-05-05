@@ -1,0 +1,12 @@
+### **Joint Frequency and Trajectory Planning for UAV Swarms**
+
+**Problem Description**  
+A swarm of UAVs must deliver data to ground terminals while avoiding mutual interference. Each UAV chooses a trajectory and a frequency subband. The objective is to maximize total delivery rate while maintaining a **minimum distance between UAVs**, introducing a **non-convex quadratic distance constraint** between trajectories.
+
+**Variable Parameters**  
+1. **Number of UAVs**: 3  
+2. **Flight Time**: 30 seconds  
+3. **Subbands Available**: 5  
+4. **Min UAV Distance Constraint**: ≥ 20 meters  
+5. **Transmit Power per UAV**: 5 W  
+6. **Channel Model**: LoS with elevation angle loss  

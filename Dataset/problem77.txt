@@ -1,0 +1,20 @@
+### **User Association Optimization in Heterogeneous Networks (HetNets)**
+
+### Problem Description:
+
+HetNets consist of macro, pico, and femtocells, requiring intelligent user association strategies to balance load and improve performance.
+
+**Objective:** Maximize network-wide throughput while ensuring balanced user distribution.
+
+**Constraints:**
+
+1. Each user must be assigned to one and only one base station.
+2. The number of users per base station must not exceed its capacity.
+3. The signal-to-interference-plus-noise ratio (SINR) per user must meet a minimum threshold.
+
+### Variable Parameters:
+
+- Number of macro base stations: 3
+- Number of pico/femto base stations: 10
+- Total number of users: 100
+- Minimum SINR per user: 9 dB

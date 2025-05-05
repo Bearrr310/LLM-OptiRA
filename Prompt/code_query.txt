@@ -1,0 +1,4 @@
+Now write this transformed problem in python code, including the objective function, constraints, and solver to use,The objective function and constraints must be implemented exactly as derived from the convexification process in the input; Give me the complete python code, just give me the code, and the rest of the text is not needed.Make sure that the first line outputs the objective function(make sure the output is positive), and the second line and then input other optimized variables（including all variables appearing in the constraints）
+Input: $input$
+
+Output:

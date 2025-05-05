@@ -1,0 +1,18 @@
+### Problem Description 
+In this optimization problem, we aim to maximize the overall network throughput in a multi-user communication system characterized by multiple users sharing a wireless channel. The communication relies on a time-division multiple access (TDMA) scheme, with each user transmitting their data in distinct time slots. We model the channel between users and the base station using a **Rayleigh fading model**, which is suitable for urban environments with multiple scattering paths. The channel gain between user \(i\) and the base station is represented as \(h_{ii} \sim \mathcal{CN}(0, \sigma^2)\), where \(\sigma^2\) is determined by the average received power.
+The objective function focuses on maximizing the sum of the logarithmic throughput for all users, achieved by optimizing the power allocation across users while considering the signal-to-interference-plus-noise ratio (SINR). The optimization must satisfy several constraints:
+
+1. Each user has a minimum rate requirement that must be met.
+2. The power allocated to each user cannot exceed a specified maximum power limit.
+3. The interference experienced by any user from others must remain below a predefined threshold to ensure acceptable service quality.
+4. The total power used by all users combined must not surpass the overall power budget allocated for the system.
+
+### Variable Parameters 
+
+- **User Count:** There are **10 users** in the network.
+- **Minimum Rate Requirement:** Each user requires a minimum data rate of **1 Mbps**.
+- **Maximum Power Limit:** The maximum transmit power for each user is set at **30 mW**.
+- **Interference Threshold:** The maximum allowable interference for any user is **10 mW**.
+- **Total Power Budget:** The total available power for the system is capped at **300 mW**.
+- **Noise Power:** The noise power in the system is considered to be **1 mW**.
+- **Rayleigh Fading Variance:** The variance of the Rayleigh fading channel is set to \(\sigma^2 = 0.1\) (mW), reflecting a moderate urban environment.

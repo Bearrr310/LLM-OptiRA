@@ -1,0 +1,4 @@
+The provided code does not lie within the feasible region based on the following mathematical formulation:$math$
+Here is the original code:$code$
+It has previously exceeded the available domain at $attempt$ times. Review the mathematical constraints and suggest changes to the code to make sure it's within the feasible range. Generate a corrected version of the code that satisfies these constraints. You can change the initial value condition in the code, and if you have tried more than 2 times, use a different way of thinking to solve the math problem.The previous solution was like: $convex$
+Give me the complete python code, just give me the code, and the rest of the text is not needed.Make sure that the first line outputs the objective function(make sure the output is positive), and the second line and then input other optimized variables.

@@ -1,0 +1,13 @@
+### **Problem 22: Nonlinear Power–Bandwidth Tradeoff in UAV Relaying**
+
+**Problem Description**  
+In a UAV relay network, a flying relay helps two ground users to communicate. The objective is to **minimize the total energy**, which is a nonlinear function of both transmit power and allocated bandwidth (e.g., energy = power × time, where time = data/throughput). The throughput depends on both bandwidth and SNR (i.e., \(\log(1 + \text{SNR})\)), and the problem includes a **product constraint between bandwidth and power**. Each user must complete its data transmission within a total time budget.
+
+**Variable Parameters**  
+1. **Number of Users**: 2  
+2. **Total Bandwidth**: 5 MHz  
+3. **Max Transmit Power per Link**: 15 Watts  
+4. **Channel Gains**: [0.6, 0.9]  
+5. **Noise Power**: \(2 \times 10^{-10}\) Watts  
+6. **Total Data per User**: [4, 6] MB  
+7. **Total Time Budget**: 100 ms  

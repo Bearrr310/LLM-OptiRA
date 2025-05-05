@@ -1,0 +1,73 @@
+Remember your job: 
+1、Following the input and output format, aligning with the length and context.
+
+Example:
+
+1:
+Input: To craft a complete mathematical formulation for an optimization problem, we need to define the objective function, constraints, and some key variables. Given the information about optimizing a specific objective related to a dataset, we will assume a communication system that could be optimizing throughput or minimizing energy consumption. 
+
+### Complete Mathematical Formulation
+
+**Objective Function:**
+Let's assume we want to maximize the throughput \( T \) of a communication channel subject to certain constraints.
+
+\[
+\text{Maximize } T = \sum_{i=1}^{N} \log_2(1 + \text{SNR}_i) \quad [Optimization Flag: 1]
+\]
+
+Where:
+- \( N \) = number of sub-channels
+- \( \text{SNR}_i \) = Signal-to-Noise Ratio for channel \( i \)
+
+**Constraints:**
+
+1. **Power Constraint:**
+   \[
+   \sum_{i=1}^{N} P_i \leq P_{\text{max}}
+   \]
+
+   Where:
+   - \( P_i \) = Power allocated to sub-channel \( i \)
+   - \( P_{\text{max}} \) = Maximum allowable power
+
+2. **Channel Condition:**
+   The channel condition \( h \) can be described as:
+   \[
+   h_i = \text{E} \{ |x_i|^2 \} \quad \text{(mean power of the transmitted signal)}
+   \]
+
+   For simplicity, let's represent the channel condition related to the SNR:
+
+   \[
+   \text{SNR}_i = \frac{h_i}{N_0} \quad \text{(where \( N_0 \) is the noise power)}
+   \]
+
+3. **Rate Constraint:**
+   Each channel must satisfy a minimum rate \( R_{\text{min},i} \):
+   \[
+   T_i = \log_2(1 + \text{SNR}_i) \geq R_{\text{min},i} \quad \forall i
+   \]
+
+   Where:
+   - \( T_i \) = Throughput of channel \( i \)
+   - \( R_{\text{min},i} \) = Minimum required rate for channel \( i \)
+
+4. **Non-negativity Constraint:**
+   \[
+   P_i \geq 0 \quad \forall i
+   \]
+
+### Summary of Variables
+- \( T \): Total throughput of the system.
+- \( P_i \): Power allocated to the \( i \)-th channel.
+- \( P_{\text{max}} \): Maximum total power available for allocation.
+- \( \text{SNR}_i \): Signal-to-Noise Ratio for the \( i \)-th channel, which depends on the channel condition \( h_i \) and the constant noise power \( N_0 \).
+- \( h_i = \text{E} \{ |x_i|^2 \} \): Mean power of the transmitted signal on the channel.
+- \( R_{\text{min},i} \): Minimum throughput requirement for channel \( i \).
+
+### Conclusion
+This formulation includes a maximization of throughput as the objective function alongside several constraints that take into account channel conditions, power limits, and minimum throughput requirements. This setup is common in communication and network optimization problems. Adjustments can be made based on specific system needs or additional variables defined within the dataset provided.
+
+Output:
+In a typical OFDMA (Orthogonal Frequency Division Multiple Access) wireless communication system, the base station is responsible for allocating bandwidth resources to multiple users to meet their communication needs. Each user is assigned one or more orthogonal subcarriers, and the system needs to allocate the transmission power of each subcarrier based on the current channel conditions and resource constraints to maximize the system throughput. The channel type is assumed to be a Gaussian white noise channel, with subcarriers being independent of each other. The optimization objective is to maximize the total throughput of the system, which is the sum of the rates of all users on their assigned subcarriers. The rate of each subcarrier follows Shannon's formula and depends on the corresponding signal-to-noise ratio (SNR). The SNR is determined by the power allocation on that subcarrier and its corresponding channel gain. Additionally, to ensure communication quality, the rate on each subcarrier must be no less than a predefined minimum rate threshold. The system is also subject to a total power budget constraint, meaning the total power across all subcarriers cannot exceed the maximum allowable power of the base station. Furthermore, all power allocations must be non-negative.
+The parameters involved in this problem are as follows: the system consists of 8 orthogonal subcarriers, meaning 8 users share the bandwidth resources. The total system bandwidth is 20 MHz, and each subcarrier is allocated an equal portion, meaning each subcarrier has a bandwidth of 2.5 MHz. The noise power spectral density is −174 dBm/Hz, corresponding to a noise power of approximately −110 dBm for each subcarrier. The maximum allowable total transmission power of the system is 1 watt (i.e., 30 dBm), and this power will be dynamically distributed across all subcarriers. Each subcarrier has an independent channel gain, and these gain values are assumed to be pre-measured. 

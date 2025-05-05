@@ -1,0 +1,20 @@
+### **Joint Power and Subcarrier Allocation in OFDMA Networks**
+
+### Problem Description:
+
+Orthogonal Frequency Division Multiple Access (OFDMA) enables flexible resource allocation by assigning subcarriers to users. The goal is to allocate power and subcarriers efficiently to maximize network performance.
+
+**Objective:** Maximize the overall system throughput.
+
+**Constraints:**
+
+1. Each subcarrier can be assigned to only one user.
+2. The total transmit power must not exceed the available power budget.
+3. The minimum SINR for each user must be satisfied.
+
+### Variable Parameters:
+
+- Number of users: 8
+- Number of available subcarriers: 32
+- Total transmit power: 40 dBm
+- Minimum SINR requirement: 10 dB
