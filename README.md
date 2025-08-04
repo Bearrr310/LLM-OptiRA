@@ -2,7 +2,7 @@
 
 This repository provides the implementation for our paper:
 
-📎 **Paper Link:** [arXiv/IEEE/DOI link]
+📎 **Paper Link:** [[arXiv/IEEE/DOI link]](https://arxiv.org/abs/2505.02091)
 
 ## **📌 Abstract**
 
