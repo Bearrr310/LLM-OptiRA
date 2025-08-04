@@ -2,7 +2,7 @@
 
 This repository provides the implementation for our paper:
 
-📎 **Paper Link:** [[arXiv/IEEE/DOI link]](https://arxiv.org/abs/2505.02091)
+📎 **Paper Link:** [LLM-OptiRA: LLM-Driven Optimization of Resource Allocation for Non-Convex Problems in Wireless Communications](https://arxiv.org/abs/2505.02091)
 
 ## **📌 Abstract**
 
